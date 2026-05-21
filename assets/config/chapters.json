@@ -1,0 +1,15 @@
+[
+  {
+    "chapter_id": "chapter_1",
+    "name": "黄巾初起",
+    "unlock_condition": "默认解锁",
+    "stage_ids": ["stage_1-1", "stage_1-2"]
+  },
+  {
+    "chapter_id": "chapter_2",
+    "name": "董卓乱政",
+    "unlock_condition": "通关 chapter_1 全部关卡",
+    "stage_ids": ["stage_2-1", "stage_2-2"]
+  }
+]
+

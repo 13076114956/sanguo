@@ -1,0 +1,75 @@
+[
+  {
+    "stage_id": "stage_1-1",
+    "name": "黄巾余党",
+    "enemy_seed": "stage-seed-101",
+    "enemy_team_size": 6,
+    "recommended_power": 1800,
+    "enemy_stat_multiplier": 1.0,
+    "rewards": {
+      "铜币": 500,
+      "元宝": 20,
+      "武将经验": 150
+    },
+    "idle_rewards_per_hour": {
+      "铜币": 120,
+      "武将经验": 40,
+      "装备材料": 10
+    }
+  },
+  {
+    "stage_id": "stage_1-2",
+    "name": "汜水试锋",
+    "enemy_seed": "stage-seed-102",
+    "enemy_team_size": 6,
+    "recommended_power": 2200,
+    "enemy_stat_multiplier": 1.2,
+    "rewards": {
+      "铜币": 650,
+      "元宝": 25,
+      "武将经验": 180
+    },
+    "idle_rewards_per_hour": {
+      "铜币": 160,
+      "武将经验": 55,
+      "装备材料": 14
+    }
+  },
+  {
+    "stage_id": "stage_2-1",
+    "name": "虎牢关前",
+    "enemy_seed": "stage-seed-201",
+    "enemy_team_size": 6,
+    "recommended_power": 2800,
+    "enemy_stat_multiplier": 1.3,
+    "rewards": {
+      "铜币": 820,
+      "元宝": 30,
+      "武将经验": 230
+    },
+    "idle_rewards_per_hour": {
+      "铜币": 210,
+      "武将经验": 70,
+      "装备材料": 18
+    }
+  },
+  {
+    "stage_id": "stage_2-2",
+    "name": "洛阳夜袭",
+    "enemy_seed": "stage-seed-202",
+    "enemy_team_size": 6,
+    "recommended_power": 3400,
+    "enemy_stat_multiplier": 1.45,
+    "rewards": {
+      "铜币": 980,
+      "元宝": 35,
+      "武将经验": 280
+    },
+    "idle_rewards_per_hour": {
+      "铜币": 260,
+      "武将经验": 88,
+      "装备材料": 22
+    }
+  }
+]
+

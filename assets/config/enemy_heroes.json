@@ -1,0 +1,1111 @@
+[
+  {
+    "id": "hero_jiefei_toumu",
+    "name": "劫匪头目",
+    "camp": "群",
+    "profession": "物理输出",
+    "role": "奇袭",
+    "hero_quality": "B",
+    "level": 1,
+    "base_stats": {
+      "hp": 1500,
+      "attack": 130,
+      "defense": 70,
+      "speed": 112,
+      "crit_rate": 0.1,
+      "crit_damage": 0.65,
+      "armor_break": 0.04,
+      "effect_hit": 0.04,
+      "effect_resist": 0.03
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_jiefei_toumu_passive_3",
+      "name": "劫掠横斩",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.95,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_jiefei_toumu_passive_1",
+        "name": "凶徒狠劲",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "attack_bonus",
+            "value": 0.12,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_jiefei_toumu_passive_2",
+        "name": "趁乱追击",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "energy_gain",
+            "value": 8,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_jiefei_toumu_ultimate",
+      "name": "掠阵突袭",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.7,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_shanzhai_daoke",
+    "name": "山寨刀客",
+    "camp": "魏",
+    "profession": "坦克",
+    "role": "先锋",
+    "hero_quality": "B",
+    "level": 1,
+    "base_stats": {
+      "hp": 1800,
+      "attack": 115,
+      "defense": 92,
+      "speed": 98,
+      "crit_rate": 0.06,
+      "crit_damage": 0.6,
+      "armor_break": 0.02,
+      "effect_hit": 0.02,
+      "effect_resist": 0.05
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_shanzhai_daoke_passive_3",
+      "name": "厚背劈砍",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.85,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_shanzhai_daoke_passive_1",
+        "name": "硬甲护身",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.14,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_shanzhai_daoke_passive_2",
+        "name": "死守寨门",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "damage_reduction",
+            "value": 0.1,
+            "duration": -1
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_shanzhai_daoke_ultimate",
+      "name": "横刀据守",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.25,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": [
+        {
+          "effect_type": "shield",
+          "value": 0.22,
+          "duration": 2
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_liukou_shushi",
+    "name": "流寇术士",
+    "camp": "吴",
+    "profession": "法术输出",
+    "role": "法师",
+    "hero_quality": "B",
+    "level": 1,
+    "base_stats": {
+      "hp": 1420,
+      "attack": 142,
+      "defense": 58,
+      "speed": 110,
+      "crit_rate": 0.08,
+      "crit_damage": 0.68,
+      "armor_break": 0.03,
+      "effect_hit": 0.06,
+      "effect_resist": 0.03
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_liukou_shushi_passive_3",
+      "name": "纸符弹射",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.92,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_liukou_shushi_passive_1",
+        "name": "邪咒凝神",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "attack_bonus",
+            "value": 0.14,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_liukou_shushi_passive_2",
+        "name": "轻身避敌",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "speed_bonus",
+            "value": 0.1,
+            "duration": -1
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_liukou_shushi_ultimate",
+      "name": "乱焰阴雷",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.6,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_huangjin_yubing",
+    "name": "黄巾余兵",
+    "camp": "群",
+    "profession": "控制",
+    "role": "辅助",
+    "hero_quality": "B",
+    "level": 1,
+    "base_stats": {
+      "hp": 1550,
+      "attack": 120,
+      "defense": 72,
+      "speed": 106,
+      "crit_rate": 0.07,
+      "crit_damage": 0.62,
+      "armor_break": 0.02,
+      "effect_hit": 0.08,
+      "effect_resist": 0.04
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_huangjin_yubing_passive_3",
+      "name": "乱军短击",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.88,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_huangjin_yubing_passive_1",
+        "name": "鼓噪惑众",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "speed_bonus",
+            "value": 0.12,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_huangjin_yubing_passive_2",
+        "name": "乱阵偷息",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "energy_gain",
+            "value": 10,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_huangjin_yubing_ultimate",
+      "name": "黄天乱号",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.35,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_shiwei_xiaowei",
+    "name": "失位校尉",
+    "camp": "蜀",
+    "profession": "治疗",
+    "role": "辅助",
+    "hero_quality": "B",
+    "level": 1,
+    "base_stats": {
+      "hp": 1650,
+      "attack": 110,
+      "defense": 78,
+      "speed": 104,
+      "crit_rate": 0.05,
+      "crit_damage": 0.6,
+      "armor_break": 0.02,
+      "effect_hit": 0.03,
+      "effect_resist": 0.06
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_shiwei_xiaowei_passive_3",
+      "name": "短枪点刺",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.78,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_shiwei_xiaowei_passive_1",
+        "name": "残军互护",
+        "skill_type": "被动",
+        "target_type": "全体",
+        "target_side": "ally",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.08,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_shiwei_xiaowei_passive_2",
+        "name": "整伍续气",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "energy_gain",
+            "value": 8,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_shiwei_xiaowei_ultimate",
+      "name": "残阵急救",
+      "skill_type": "必杀",
+      "target_type": "血量最低",
+      "target_side": "ally",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 0.0,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": [
+        {
+          "effect_type": "heal",
+          "value": 1.1,
+          "duration": 0
+        },
+        {
+          "effect_type": "shield",
+          "value": 0.18,
+          "duration": 2
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_xiahou_en",
+    "name": "夏侯恩",
+    "camp": "魏",
+    "profession": "物理输出",
+    "role": "奇袭",
+    "hero_quality": "A",
+    "level": 1,
+    "base_stats": {
+      "hp": 2350,
+      "attack": 185,
+      "defense": 98,
+      "speed": 118,
+      "crit_rate": 0.16,
+      "crit_damage": 0.78,
+      "armor_break": 0.08,
+      "effect_hit": 0.04,
+      "effect_resist": 0.05
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_xiahou_en_passive_3",
+      "name": "佩剑突刺",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_xiahou_en_passive_1",
+        "name": "宿卫锐意",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "attack_bonus",
+            "value": 0.16,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_xiahou_en_passive_2",
+        "name": "轻骑追锋",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "energy_gain",
+            "value": 10,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_xiahou_en_ultimate",
+      "name": "骤马穿阵",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.9,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_li_tong",
+    "name": "李通",
+    "camp": "魏",
+    "profession": "坦克",
+    "role": "先锋",
+    "hero_quality": "A",
+    "level": 1,
+    "base_stats": {
+      "hp": 2700,
+      "attack": 150,
+      "defense": 128,
+      "speed": 105,
+      "crit_rate": 0.08,
+      "crit_damage": 0.68,
+      "armor_break": 0.04,
+      "effect_hit": 0.03,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_li_tong_passive_3",
+      "name": "列盾重斩",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.92,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_li_tong_passive_1",
+        "name": "固营之志",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.18,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_li_tong_passive_2",
+        "name": "坚壁御敌",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "damage_reduction",
+            "value": 0.12,
+            "duration": -1
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_li_tong_ultimate",
+      "name": "���马镇锋",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.45,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": [
+        {
+          "effect_type": "shield",
+          "value": 0.3,
+          "duration": 2
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_liao_hua",
+    "name": "廖化",
+    "camp": "蜀",
+    "profession": "控制",
+    "role": "辅助",
+    "hero_quality": "A",
+    "level": 1,
+    "base_stats": {
+      "hp": 2480,
+      "attack": 160,
+      "defense": 105,
+      "speed": 111,
+      "crit_rate": 0.09,
+      "crit_damage": 0.7,
+      "armor_break": 0.05,
+      "effect_hit": 0.09,
+      "effect_resist": 0.07
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_liao_hua_passive_3",
+      "name": "老将压阵",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.94,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_liao_hua_passive_1",
+        "name": "持阵定心",
+        "skill_type": "被动",
+        "target_type": "全体",
+        "target_side": "ally",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "speed_bonus",
+            "value": 0.08,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_liao_hua_passive_2",
+        "name": "转战不殆",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "energy_gain",
+            "value": 10,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_liao_hua_ultimate",
+      "name": "回马震阵",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.55,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_zhou_cang",
+    "name": "周仓",
+    "camp": "蜀",
+    "profession": "物理输出",
+    "role": "先锋",
+    "hero_quality": "A",
+    "level": 1,
+    "base_stats": {
+      "hp": 2600,
+      "attack": 178,
+      "defense": 110,
+      "speed": 108,
+      "crit_rate": 0.12,
+      "crit_damage": 0.75,
+      "armor_break": 0.07,
+      "effect_hit": 0.04,
+      "effect_resist": 0.06
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_zhou_cang_passive_3",
+      "name": "扛刀猛进",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.98,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_zhou_cang_passive_1",
+        "name": "追随死战",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "attack_bonus",
+            "value": 0.15,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_zhou_cang_passive_2",
+        "name": "血勇难当",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.1,
+            "duration": -1
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_zhou_cang_ultimate",
+      "name": "山崩重劈",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.85,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_xu_sheng",
+    "name": "徐盛",
+    "camp": "吴",
+    "profession": "坦克",
+    "role": "先锋",
+    "hero_quality": "A",
+    "level": 1,
+    "base_stats": {
+      "hp": 2800,
+      "attack": 158,
+      "defense": 135,
+      "speed": 102,
+      "crit_rate": 0.08,
+      "crit_damage": 0.68,
+      "armor_break": 0.04,
+      "effect_hit": 0.03,
+      "effect_resist": 0.09
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_xu_sheng_passive_3",
+      "name": "坚橹横扫",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.9,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_xu_sheng_passive_1",
+        "name": "江防壁垒",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.2,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_xu_sheng_passive_2",
+        "name": "重甲稳军",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "damage_reduction",
+            "value": 0.14,
+            "duration": -1
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_xu_sheng_ultimate",
+      "name": "横江拒浪",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.4,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": [
+        {
+          "effect_type": "shield",
+          "value": 0.32,
+          "duration": 2
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_ding_feng",
+    "name": "丁奉",
+    "camp": "吴",
+    "profession": "物理输出",
+    "role": "奇袭",
+    "hero_quality": "A",
+    "level": 1,
+    "base_stats": {
+      "hp": 2450,
+      "attack": 190,
+      "defense": 92,
+      "speed": 120,
+      "crit_rate": 0.17,
+      "crit_damage": 0.8,
+      "armor_break": 0.09,
+      "effect_hit": 0.05,
+      "effect_resist": 0.05
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_ding_feng_passive_3",
+      "name": "雪夜突兵",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 1.02,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_ding_feng_passive_1",
+        "name": "劲旅锐锋",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "attack_bonus",
+            "value": 0.18,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_ding_feng_passive_2",
+        "name": "乘势追击",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "energy_gain",
+            "value": 10,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_ding_feng_ultimate",
+      "name": "飞军断浪",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.95,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_hou_cheng",
+    "name": "侯成",
+    "camp": "群",
+    "profession": "控制",
+    "role": "法师",
+    "hero_quality": "A",
+    "level": 1,
+    "base_stats": {
+      "hp": 2300,
+      "attack": 170,
+      "defense": 88,
+      "speed": 116,
+      "crit_rate": 0.1,
+      "crit_damage": 0.72,
+      "armor_break": 0.05,
+      "effect_hit": 0.1,
+      "effect_resist": 0.05
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_hou_cheng_passive_3",
+      "name": "反旗急刺",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.96,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_hou_cheng_passive_1",
+        "name": "多疑善变",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "speed_bonus",
+            "value": 0.12,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_hou_cheng_passive_2",
+        "name": "伺机而动",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "energy_gain",
+            "value": 10,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_hou_cheng_ultimate",
+      "name": "反戈乱阵",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.6,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_song_xian",
+    "name": "宋宪",
+    "camp": "群",
+    "profession": "法术输出",
+    "role": "法师",
+    "hero_quality": "A",
+    "level": 1,
+    "base_stats": {
+      "hp": 2380,
+      "attack": 168,
+      "defense": 94,
+      "speed": 114,
+      "crit_rate": 0.11,
+      "crit_damage": 0.74,
+      "armor_break": 0.05,
+      "effect_hit": 0.08,
+      "effect_resist": 0.05
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_song_xian_passive_3",
+      "name": "狼顾连射",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.98,
+      "energy_cost": 0,
+      "level": 1,
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_song_xian_passive_1",
+        "name": "侧击谋断",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "attack_bonus",
+            "value": 0.15,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_song_xian_passive_2",
+        "name": "游弋蓄势",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects": [
+          {
+            "effect_type": "speed_bonus",
+            "value": 0.1,
+            "duration": -1
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_song_xian_ultimate",
+      "name": "回锋乱雨",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.72,
+      "energy_cost": 100,
+      "level": 1,
+      "effects": []
+    },
+    "bonds": []
+  }
+]
+

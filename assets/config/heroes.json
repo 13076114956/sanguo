@@ -1,0 +1,6289 @@
+[
+  {
+    "id": "hero_liu_bei",
+    "name": "刘备",
+    "camp": "蜀",
+    "profession": "治疗",
+    "role": "辅助",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "base_stats": {
+      "hp": 1800,
+      "attack": 150,
+      "defense": 90,
+      "speed": 108,
+      "crit_rate": 0.12,
+      "crit_damage": 0.7,
+      "armor_break": 0.05,
+      "effect_hit": 0.1,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_liu_bei_normal",
+      "name": "雌雄双股",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.85,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "4": 0.85
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_liu_bei_passive_1",
+        "name": "蜀汉仁心",
+        "skill_type": "被动",
+        "target_type": "全体",
+        "target_side": "ally",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "4": [
+            {
+              "effect_type": "defense_bonus",
+              "value": 0.1,
+              "duration": -1
+            }
+          ]
+        },
+        "effects": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.1,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_liu_bei_passive_2",
+        "name": "昭烈激励",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "4": [
+            {
+              "effect_type": "energy_gain",
+              "value": 10,
+              "duration": 0
+            }
+          ]
+        },
+        "effects": [
+          {
+            "effect_type": "energy_gain",
+            "value": 10,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_liu_bei_ultimate",
+      "name": "仁德回春",
+      "skill_type": "必杀",
+      "target_type": "血量最低",
+      "target_side": "ally",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 0.0,
+      "energy_cost": 100,
+      "level": 1,
+      "effects_by_level": {
+        "4": [
+          {
+            "effect_type": "heal",
+            "value": 1.35,
+            "duration": 0
+          },
+          {
+            "effect_type": "cleanse",
+            "value": 2,
+            "duration": 0,
+            "status_filter": "debuff"
+          },
+          {
+            "effect_type": "shield",
+            "value": 0.45,
+            "duration": 2
+          },
+          {
+            "effect_type": "invincible",
+            "value": 1.0,
+            "duration": 1
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_type": "heal",
+          "value": 1.35,
+          "duration": 0
+        },
+        {
+          "effect_type": "cleanse",
+          "value": 2,
+          "duration": 0,
+          "status_filter": "debuff"
+        },
+        {
+          "effect_type": "shield",
+          "value": 0.45,
+          "duration": 2
+        },
+        {
+          "effect_type": "invincible",
+          "value": 1.0,
+          "duration": 1
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_guan_yu",
+    "name": "关羽",
+    "camp": "蜀",
+    "profession": "物理输出",
+    "role": "先锋",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_1"
+    ],
+    "base_stats": {
+      "hp": 4680,
+      "attack": 232,
+      "defense": 128,
+      "speed": 122,
+      "crit_rate": 0.3,
+      "crit_damage": 0.9,
+      "armor_break": 0.15,
+      "effect_hit": 0.08,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_guan_yu_normal",
+      "name": "单刀赴会",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.2,
+        "4": 1.4
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "guan_yu_wu_sheng_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "critical_bonus_ratio": 1.0
+              }
+            }
+          },
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 0.5,
+            "duration": 0,
+            "status_filter": "guan_yu_wu_sheng_mark"
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "guan_yu_wu_sheng_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "critical_bonus_ratio": 1.0
+              }
+            }
+          },
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 0.75,
+            "duration": 0,
+            "status_filter": "guan_yu_wu_sheng_mark"
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "guan_yu_wu_sheng_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "critical_bonus_ratio": 1.0
+              }
+            }
+          },
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 1.0,
+            "duration": 0,
+            "status_filter": "guan_yu_wu_sheng_mark"
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "guan_yu_wu_sheng_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "critical_bonus_ratio": 1.0
+              }
+            }
+          },
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 1.0,
+            "duration": 0,
+            "status_filter": "guan_yu_wu_sheng_mark"
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_guan_yu_passive_1",
+        "name": "武魂护体",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "stack_name": "guan_yu_wuhun_guard",
+                "stack_duration": -1,
+                "max_stacks": 4,
+                "action_name": "武魂护体叠加",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "stack_name": "guan_yu_wuhun_guard",
+                "stack_duration": -1,
+                "max_stacks": 4,
+                "action_name": "武魂护体叠加",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ],
+                "forbidden_status_effect": "guan_yu_divine_form"
+              }
+            },
+            {
+              "effect_type": "transform_stack_to_status_on_threshold",
+              "value": 1.0,
+              "duration": 3,
+              "params": {
+                "stack_name": "guan_yu_wuhun_guard",
+                "threshold": 4,
+                "clear_stack_name": "guan_yu_wuhun_guard",
+                "status_effect_type": "guan_yu_divine_form",
+                "status_duration": 3,
+                "action_name": "武圣降临生效",
+                "status_params": {
+                  "attack_bonus": 0.4,
+                  "crit_rate_bonus": 1.0,
+                  "damage_reduction": 0.4
+                },
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            },
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": 3,
+              "params": {
+                "stack_name": "guan_yu_war_intent",
+                "stack_duration": 3,
+                "max_stacks": 3,
+                "action_name": "战意叠加",
+                "required_status_effect": "guan_yu_divine_form",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            },
+            {
+              "effect_type": "follow_up_attack_on_receive_attack_stack_threshold",
+              "value": 1.5,
+              "duration": 0,
+              "params": {
+                "stack_name": "guan_yu_war_intent",
+                "threshold": 3,
+                "consumed_stack_name": "guan_yu_war_intent",
+                "target_type": "随机单体",
+                "hit_count": 4,
+                "retarget_per_hit": true,
+                "action_name": "武圣刀光",
+                "required_status_effect": "guan_yu_divine_form",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ],
+                "disable_mark_application": true,
+                "disable_mark_bonus": true,
+                "disable_mark_critical_trigger": true
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "stack_name": "guan_yu_wuhun_guard",
+                "stack_duration": -1,
+                "max_stacks": 4,
+                "action_name": "武魂护体叠加",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ],
+                "forbidden_status_effect": "guan_yu_divine_form"
+              }
+            },
+            {
+              "effect_type": "transform_stack_to_status_on_threshold",
+              "value": 1.0,
+              "duration": 4,
+              "params": {
+                "stack_name": "guan_yu_wuhun_guard",
+                "threshold": 4,
+                "clear_stack_name": "guan_yu_wuhun_guard",
+                "status_effect_type": "guan_yu_divine_form",
+                "status_duration": 4,
+                "action_name": "武圣降临生效",
+                "status_params": {
+                  "attack_bonus": 0.4,
+                  "crit_rate_bonus": 1.0,
+                  "damage_reduction": 0.4
+                },
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            },
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": 3,
+              "params": {
+                "stack_name": "guan_yu_war_intent",
+                "stack_duration": 3,
+                "max_stacks": 3,
+                "action_name": "战意叠加",
+                "required_status_effect": "guan_yu_divine_form",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            },
+            {
+              "effect_type": "follow_up_attack_on_receive_attack_stack_threshold",
+              "value": 2.0,
+              "duration": 0,
+              "params": {
+                "stack_name": "guan_yu_war_intent",
+                "threshold": 3,
+                "consumed_stack_name": "guan_yu_war_intent",
+                "target_type": "随机单体",
+                "hit_count": 4,
+                "retarget_per_hit": true,
+                "action_name": "武圣刀光",
+                "required_status_effect": "guan_yu_divine_form",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ],
+                "disable_mark_application": true,
+                "disable_mark_bonus": true,
+                "disable_mark_critical_trigger": true
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "stack_name": "guan_yu_wuhun_guard",
+                "stack_duration": -1,
+                "max_stacks": 4,
+                "action_name": "武魂护体叠加",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ],
+                "forbidden_status_effect": "guan_yu_divine_form"
+              }
+            },
+            {
+              "effect_type": "transform_stack_to_status_on_threshold",
+              "value": 1.0,
+              "duration": 4,
+              "params": {
+                "stack_name": "guan_yu_wuhun_guard",
+                "threshold": 4,
+                "clear_stack_name": "guan_yu_wuhun_guard",
+                "status_effect_type": "guan_yu_divine_form",
+                "status_duration": 4,
+                "action_name": "武圣降临生效",
+                "status_params": {
+                  "attack_bonus": 0.6,
+                  "crit_rate_bonus": 1.0,
+                  "damage_reduction": 0.5,
+                  "armor_break_bonus": 0.2
+                },
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            },
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": 3,
+              "params": {
+                "stack_name": "guan_yu_war_intent",
+                "stack_duration": 3,
+                "max_stacks": 3,
+                "action_name": "战意叠加",
+                "required_status_effect": "guan_yu_divine_form",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            },
+            {
+              "effect_type": "follow_up_attack_on_receive_attack_stack_threshold",
+              "value": 2.5,
+              "duration": 0,
+              "params": {
+                "stack_name": "guan_yu_war_intent",
+                "threshold": 3,
+                "consumed_stack_name": "guan_yu_war_intent",
+                "target_type": "随机单体",
+                "hit_count": 4,
+                "retarget_per_hit": true,
+                "action_name": "武圣刀光",
+                "required_status_effect": "guan_yu_divine_form",
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ],
+                "disable_mark_application": true,
+                "disable_mark_bonus": true,
+                "disable_mark_critical_trigger": true
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_guan_yu_passive_2",
+        "name": "武圣印记",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_to_attacker_on_receive_attack",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "status_effect_type": "guan_yu_wu_sheng_mark",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "critical_bonus_ratio": 1.0
+                },
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_to_attacker_on_receive_attack",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "status_effect_type": "guan_yu_wu_sheng_mark",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "critical_bonus_ratio": 1.0
+                },
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_to_attacker_on_receive_attack",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "status_effect_type": "guan_yu_wu_sheng_mark",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "critical_bonus_ratio": 1.0
+                },
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_to_attacker_on_receive_attack",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "status_effect_type": "guan_yu_wu_sheng_mark",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "critical_bonus_ratio": 1.0
+                },
+                "allowed_skill_types": [
+                  "普攻",
+                  "必杀",
+                  "追击"
+                ]
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_guan_yu_ultimate",
+      "name": "青龙啸天",
+      "skill_type": "必杀",
+      "target_type": "随机4人",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.4,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "1": 2.0,
+        "2": 2.8,
+        "3": 3.2,
+        "4": 4.2
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "guan_yu_wu_sheng_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "critical_bonus_ratio": 1.0
+              }
+            }
+          },
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 0.5,
+            "duration": 0,
+            "status_filter": "guan_yu_wu_sheng_mark"
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status",
+            "value": 1.35,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "guan_yu_wu_sheng_mark",
+              "status_duration": 3,
+              "status_value": 1.35,
+              "status_params": {
+                "critical_bonus_ratio": 1.35
+              }
+            }
+          },
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 0.75,
+            "duration": 0,
+            "status_filter": "guan_yu_wu_sheng_mark"
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status",
+            "value": 1.5,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "guan_yu_wu_sheng_mark",
+              "status_duration": 3,
+              "status_value": 1.5,
+              "status_params": {
+                "critical_bonus_ratio": 1.5
+              }
+            }
+          },
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 1.0,
+            "duration": 0,
+            "status_filter": "guan_yu_wu_sheng_mark"
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status",
+            "value": 1.5,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "guan_yu_wu_sheng_mark",
+              "status_duration": 3,
+              "status_value": 1.5,
+              "status_params": {
+                "critical_bonus_ratio": 1.5
+              }
+            }
+          },
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 1.0,
+            "duration": 0,
+            "status_filter": "guan_yu_wu_sheng_mark"
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_zhang_fei",
+    "name": "张飞",
+    "camp": "蜀",
+    "profession": "坦克",
+    "role": "先锋",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "base_stats": {
+      "hp": 2500,
+      "attack": 170,
+      "defense": 140,
+      "speed": 96,
+      "crit_rate": 0.1,
+      "crit_damage": 0.6,
+      "armor_break": 0.08,
+      "effect_hit": 0.06,
+      "effect_resist": 0.1
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_zhang_fei_normal",
+      "name": "丈八横扫",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 1.05,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "4": 1.05
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_zhang_fei_passive_1",
+        "name": "燕人铁躯",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "4": [
+            {
+              "effect_type": "defense_bonus",
+              "value": 0.2,
+              "duration": -1
+            }
+          ]
+        },
+        "effects": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.2,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_zhang_fei_passive_2",
+        "name": "怒胆护身",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动前",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "4": [
+            {
+              "effect_type": "shield",
+              "value": 0.35,
+              "duration": 1
+            }
+          ]
+        },
+        "effects": [
+          {
+            "effect_type": "shield",
+            "value": 0.35,
+            "duration": 1
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_zhang_fei_ultimate",
+      "name": "怒吼震岳",
+      "skill_type": "必杀",
+      "target_type": "全体",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.25,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "4": 1.25
+      },
+      "effects": [
+        {
+          "effect_type": "stun",
+          "value": 1.0,
+          "duration": 1,
+          "chance": 0.7
+        },
+        {
+          "effect_type": "taunt",
+          "value": 1.0,
+          "duration": 1,
+          "chance": 1.0
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_cao_cao",
+    "name": "曹操",
+    "camp": "魏",
+    "profession": "控制",
+    "role": "法师",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "base_stats": {
+      "hp": 2000,
+      "attack": 210,
+      "defense": 105,
+      "speed": 111,
+      "crit_rate": 0.16,
+      "crit_damage": 0.8,
+      "armor_break": 0.1,
+      "effect_hit": 0.16,
+      "effect_resist": 0.1
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_cao_cao_normal",
+      "name": "魏武迅击",
+      "skill_type": "被动",
+      "target_type": "后排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "4": 1.0
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_cao_cao_passive_1",
+        "name": "魏武挥鞭",
+        "skill_type": "被动",
+        "target_type": "全体",
+        "target_side": "ally",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "4": [
+            {
+              "effect_type": "attack_bonus",
+              "value": 0.1,
+              "duration": -1
+            }
+          ]
+        },
+        "effects": [
+          {
+            "effect_type": "attack_bonus",
+            "value": 0.1,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_cao_cao_passive_2",
+        "name": "权谋压制",
+        "skill_type": "被动",
+        "target_type": "血量最低",
+        "target_side": "enemy",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "4": [
+            {
+              "effect_type": "speed_bonus",
+              "value": -0.12,
+              "duration": 2,
+              "chance": 0.85
+            }
+          ]
+        },
+        "effects": [
+          {
+            "effect_type": "speed_bonus",
+            "value": -0.12,
+            "duration": 2,
+            "chance": 0.85
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_cao_cao_ultimate",
+      "name": "挟天子令",
+      "skill_type": "必杀",
+      "target_type": "后排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.55,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "4": 1.55
+      },
+      "effects": [
+        {
+          "effect_type": "dispel",
+          "value": 1,
+          "duration": 0,
+          "status_filter": "buff"
+        },
+        {
+          "effect_type": "silence",
+          "value": 1.0,
+          "duration": 2,
+          "chance": 0.75
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_xiahou_dun",
+    "name": "夏侯惇",
+    "camp": "魏",
+    "profession": "坦克",
+    "role": "先锋",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "base_stats": {
+      "hp": 2450,
+      "attack": 160,
+      "defense": 145,
+      "speed": 94,
+      "crit_rate": 0.09,
+      "crit_damage": 0.6,
+      "armor_break": 0.08,
+      "effect_hit": 0.05,
+      "effect_resist": 0.11
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_xiahou_dun_normal",
+      "name": "朴刀重击",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.95,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "4": 0.95
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_xiahou_dun_passive_1",
+        "name": "铁壁军魂",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "4": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.15,
+              "duration": -1
+            }
+          ]
+        },
+        "effects": [
+          {
+            "effect_type": "damage_reduction",
+            "value": 0.15,
+            "duration": -1
+          }
+        ]
+      },
+      {
+        "skill_id": "skill_xiahou_dun_passive_2",
+        "name": "鏖战不屈",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "4": [
+            {
+              "effect_type": "heal",
+              "value": 0.3,
+              "duration": 0
+            }
+          ]
+        },
+        "effects": [
+          {
+            "effect_type": "heal",
+            "value": 0.3,
+            "duration": 0
+          }
+        ]
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_xiahou_dun_ultimate",
+      "name": "铁壁战吼",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.4,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "4": 1.4
+      },
+      "effects": [
+        {
+          "effect_type": "attack_bonus",
+          "value": -0.12,
+          "duration": 2,
+          "chance": 0.9
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_zhang_liao",
+    "name": "张辽",
+    "camp": "魏",
+    "profession": "物理输出",
+    "role": "奇袭",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "base_stats": {
+      "hp": 2020,
+      "attack": 248,
+      "defense": 92,
+      "speed": 121,
+      "crit_rate": 0.19,
+      "crit_damage": 0.92,
+      "armor_break": 0.16,
+      "effect_hit": 0.1,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_zhang_liao_normal",
+      "name": "英勇突击",
+      "skill_type": "被动",
+      "target_type": "生命百分比最低",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 2.0,
+      "energy_cost": 0,
+      "damage_by_level": {
+        "1": 2.0,
+        "2": 2.5,
+        "3": 3.0,
+        "4": 3.0
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.01,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 5
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.03,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 15
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.05,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 25
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.05,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 25
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_zhang_liao_passive_1",
+        "name": "攻其要害",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "damage_multiplier_by_target_hp",
+              "value": 1.0,
+              "duration": 0,
+              "params": {
+                "required_skill_id": "skill_zhang_liao_ultimate",
+                "thresholds": [
+                  {
+                    "max_hp_ratio": 0.5,
+                    "multiplier": 2.0
+                  }
+                ]
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "damage_multiplier_by_target_hp",
+              "value": 1.0,
+              "duration": 0,
+              "params": {
+                "required_skill_id": "skill_zhang_liao_ultimate",
+                "thresholds": [
+                  {
+                    "max_hp_ratio": 0.5,
+                    "multiplier": 2.0
+                  },
+                  {
+                    "max_hp_ratio": 0.3,
+                    "multiplier": 3.0
+                  }
+                ]
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "damage_multiplier_by_target_hp",
+              "value": 1.0,
+              "duration": 0,
+              "params": {
+                "required_skill_id": "skill_zhang_liao_ultimate",
+                "thresholds": [
+                  {
+                    "max_hp_ratio": 0.5,
+                    "multiplier": 2.0
+                  },
+                  {
+                    "max_hp_ratio": 0.3,
+                    "multiplier": 5.0
+                  }
+                ]
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "damage_multiplier_by_target_hp",
+              "value": 1.0,
+              "duration": 0,
+              "params": {
+                "required_skill_id": "skill_zhang_liao_ultimate",
+                "thresholds": [
+                  {
+                    "max_hp_ratio": 0.5,
+                    "multiplier": 3.0
+                  },
+                  {
+                    "max_hp_ratio": 0.3,
+                    "multiplier": 6.0
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_zhang_liao_passive_2",
+        "name": "及锋而试",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "gain_energy_and_heal_on_enemy_death",
+              "value": 30,
+              "duration": 0,
+              "params": {
+                "heal_attack_ratio": 1.5
+              }
+            },
+            {
+              "effect_type": "gain_attack_bonus_on_kill",
+              "value": 0.1,
+              "duration": -1,
+              "params": {
+                "max_stacks": 99
+              }
+            },
+            {
+              "effect_type": "gain_extra_turn_on_kill",
+              "value": 1,
+              "duration": 0,
+              "params": {
+                "limit_per_round": 1
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "gain_energy_and_heal_on_enemy_death",
+              "value": 50,
+              "duration": 0,
+              "params": {
+                "heal_attack_ratio": 2.0
+              }
+            },
+            {
+              "effect_type": "gain_attack_bonus_on_kill",
+              "value": 0.15,
+              "duration": -1,
+              "params": {
+                "max_stacks": 99
+              }
+            },
+            {
+              "effect_type": "gain_extra_turn_on_kill",
+              "value": 1,
+              "duration": 0,
+              "params": {
+                "limit_per_round": 1
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "gain_energy_and_heal_on_enemy_death",
+              "value": 50,
+              "duration": 0,
+              "params": {
+                "heal_attack_ratio": 3.0
+              }
+            },
+            {
+              "effect_type": "gain_attack_bonus_on_kill",
+              "value": 0.2,
+              "duration": -1,
+              "params": {
+                "max_stacks": 99
+              }
+            },
+            {
+              "effect_type": "gain_extra_turn_on_kill",
+              "value": 1,
+              "duration": 0
+            },
+            {
+              "effect_type": "crit_rate_bonus_on_kill",
+              "value": 0.0,
+              "duration": -1
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "gain_energy_and_heal_on_enemy_death",
+              "value": 50,
+              "duration": 0,
+              "params": {
+                "heal_attack_ratio": 3.0
+              }
+            },
+            {
+              "effect_type": "gain_attack_bonus_on_kill",
+              "value": 0.2,
+              "duration": -1,
+              "params": {
+                "max_stacks": 99
+              }
+            },
+            {
+              "effect_type": "gain_extra_turn_on_kill",
+              "value": 1,
+              "duration": 0
+            },
+            {
+              "effect_type": "crit_rate_bonus_on_kill",
+              "value": 0.1,
+              "duration": -1
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_zhang_liao_ultimate",
+      "name": "分身斩敌",
+      "skill_type": "必杀",
+      "target_type": "生命百分比最低2名",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 2.0,
+      "energy_cost": 100,
+      "damage_by_level": {
+        "1": 2.0,
+        "2": 2.5,
+        "3": 3.0,
+        "4": 3.0
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_zhuge_liang",
+    "name": "诸葛亮",
+    "camp": "蜀",
+    "profession": "法术输出",
+    "role": "法师",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "base_stats": {
+      "hp": 1980,
+      "attack": 238,
+      "defense": 92,
+      "speed": 118,
+      "crit_rate": 0.18,
+      "crit_damage": 0.95,
+      "armor_break": 0.12,
+      "effect_hit": 0.18,
+      "effect_resist": 0.1
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_zhuge_liang_normal",
+      "name": "风起云涌",
+      "skill_type": "被动",
+      "target_type": "全体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 1.5,
+      "energy_cost": 0,
+      "damage_by_level": {
+        "1": 1.5,
+        "2": 2.25,
+        "3": 3.0,
+        "4": 3.75
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "bonus_damage_per_stack",
+            "value": 0.5,
+            "status_filter": "wind_spirit",
+            "params": {
+              "stack_name": "wind_spirit"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "bonus_damage_per_stack",
+            "value": 0.75,
+            "status_filter": "wind_spirit",
+            "params": {
+              "stack_name": "wind_spirit"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "bonus_damage_per_stack",
+            "value": 1.0,
+            "status_filter": "wind_spirit",
+            "params": {
+              "stack_name": "wind_spirit"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "bonus_damage_per_stack",
+            "value": 1.35,
+            "status_filter": "wind_spirit",
+            "params": {
+              "stack_name": "wind_spirit"
+            }
+          }
+        ]
+      },
+      "params": {
+        "damage_mode": "true",
+        "blocked_by_control": true
+      }
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_zhuge_liang_passive_1",
+        "name": "风云突变",
+        "skill_type": "被动",
+        "target_type": "随机3人",
+        "target_side": "enemy",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 1.0,
+        "energy_cost": 0,
+        "damage_by_level": {
+          "1": 1.0,
+          "2": 1.25,
+          "3": 1.5,
+          "4": 1.75
+        },
+        "effects_by_level": {
+          "3": [
+            {
+              "effect_type": "gain_attack_bonus_on_kill",
+              "value": 0.2,
+              "duration": -1,
+              "params": {
+                "max_stacks": 5
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "gain_attack_bonus_on_kill",
+              "value": 0.2,
+              "duration": -1,
+              "params": {
+                "max_stacks": 5
+              }
+            }
+          ]
+        },
+        "params": {
+          "requires_last_skill_type": "普攻",
+          "damage_mode": "true"
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_zhuge_liang_passive_2",
+        "name": "七星续命",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "survive_once",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "invincible_duration": 2,
+                "untargetable_duration": 2
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "survive_once",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "invincible_duration": 2,
+                "untargetable_duration": 2,
+                "shield_ratio": 1.0,
+                "shield_duration": 2
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "survive_once",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "invincible_duration": 2,
+                "untargetable_duration": 2,
+                "shield_ratio": 2.0,
+                "shield_duration": 2
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "survive_once",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "invincible_duration": 2,
+                "untargetable_duration": 2,
+                "shield_ratio": 2.0,
+                "shield_duration": 2
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_zhuge_liang_ultimate",
+      "name": "风卷残云",
+      "skill_type": "必杀",
+      "target_type": "全体",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 100,
+      "damage_by_level": {
+        "1": 1.0,
+        "2": 1.5,
+        "3": 2.0,
+        "4": 2.0
+      },
+      "params": {
+        "damage_mode": "true"
+      },
+      "round_start_effects_by_level": {
+        "1": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.03,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 5,
+              "target_scope": "enemies"
+            }
+          },
+          {
+            "effect_type": "cleanse_random_allies",
+            "value": 2,
+            "duration": 0,
+            "chance": 0.5,
+            "status_filter": "damage_over_time",
+            "params": {
+              "count": 2,
+              "layers": 1
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.04,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 6,
+              "target_scope": "enemies"
+            }
+          },
+          {
+            "effect_type": "cleanse_random_allies",
+            "value": 4,
+            "duration": 0,
+            "chance": 0.5,
+            "status_filter": "damage_over_time",
+            "params": {
+              "count": 4,
+              "layers": 1
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.05,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 8,
+              "target_scope": "enemies"
+            }
+          },
+          {
+            "effect_type": "cleanse_random_allies",
+            "value": 99,
+            "duration": 0,
+            "chance": 0.5,
+            "status_filter": "damage_over_time",
+            "params": {
+              "count": 99,
+              "layers": 1
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.05,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 8,
+              "target_scope": "enemies"
+            }
+          },
+          {
+            "effect_type": "cleanse_random_allies",
+            "value": 99,
+            "duration": 0,
+            "chance": 0.5,
+            "status_filter": "damage_over_time",
+            "params": {
+              "count": 99,
+              "layers": 1
+            }
+          }
+        ]
+      },
+      "effects": [
+        {
+          "effect_type": "grant_stack",
+          "value": 1.0,
+          "duration": -1,
+          "status_filter": "wind_spirit",
+          "params": {
+            "stack_name": "wind_spirit",
+            "target": "self"
+          }
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_zhao_yun",
+    "name": "赵云",
+    "camp": "蜀",
+    "profession": "物理输出",
+    "role": "奇袭",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "base_stats": {
+      "hp": 2080,
+      "attack": 246,
+      "defense": 94,
+      "speed": 122,
+      "crit_rate": 0.2,
+      "crit_damage": 1.0,
+      "armor_break": 0.18,
+      "effect_hit": 0.1,
+      "effect_resist": 0.1
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_zhao_yun_normal",
+      "name": "见血封喉",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 0,
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 0.8,
+            "duration": 0,
+            "status_filter": "bleed"
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 0.8,
+            "duration": 0,
+            "status_filter": "bleed"
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 0.8,
+            "duration": 0,
+            "status_filter": "bleed"
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "bonus_damage_if_target_has_status",
+            "value": 1.6,
+            "duration": 0,
+            "status_filter": "bleed"
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_zhao_yun_passive_1",
+        "name": "浑身是胆",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "params": {
+          "requires_last_skill_type": "必杀"
+        },
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "crit_rate_bonus",
+              "value": 0.3,
+              "duration": 3
+            },
+            {
+              "effect_type": "crit_damage_bonus",
+              "value": 0.4,
+              "duration": 3
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "crit_rate_bonus",
+              "value": 0.4,
+              "duration": 3
+            },
+            {
+              "effect_type": "crit_damage_bonus",
+              "value": 0.4,
+              "duration": 3
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "crit_rate_bonus",
+              "value": 0.4,
+              "duration": 3
+            },
+            {
+              "effect_type": "crit_damage_bonus",
+              "value": 0.7,
+              "duration": 3
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "crit_rate_bonus",
+              "value": 0.4,
+              "duration": 3
+            },
+            {
+              "effect_type": "crit_damage_bonus",
+              "value": 0.7,
+              "duration": 3
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_zhao_yun_passive_2",
+        "name": "七进七出",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "params": {
+          "requires_last_skill_type": "普攻"
+        },
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "follow_up_attack",
+              "value": 0.85,
+              "duration": 0,
+              "chance": 0.75,
+              "params": {
+                "chance": 0.75,
+                "min_times": 3,
+                "max_times": 15,
+                "target_type": "随机单体",
+                "action_name": "七进七出",
+                "chainable": true
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "follow_up_attack",
+              "value": 0.85,
+              "duration": 0,
+              "chance": 0.85,
+              "params": {
+                "chance": 0.85,
+                "min_times": 3,
+                "max_times": 15,
+                "target_type": "随机单体",
+                "action_name": "七进七出",
+                "bonus_status": "bleed",
+                "bonus_value": 0.8,
+                "chainable": true
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "follow_up_attack",
+              "value": 0.85,
+              "duration": 0,
+              "chance": 0.85,
+              "params": {
+                "chance": 0.85,
+                "min_times": 3,
+                "max_times": 20,
+                "target_type": "随机单体",
+                "action_name": "七进七出",
+                "bonus_status": "bleed",
+                "bonus_value": 0.8,
+                "chainable": true
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "follow_up_attack",
+              "value": 0.85,
+              "duration": 0,
+              "chance": 0.9,
+              "params": {
+                "chance": 0.9,
+                "min_times": 3,
+                "max_times": 25,
+                "target_type": "随机单体",
+                "action_name": "七进七出",
+                "bonus_status": "bleed",
+                "bonus_value": 1.6,
+                "chainable": true
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_zhao_yun_ultimate",
+      "name": "龙胆银枪",
+      "skill_type": "必杀",
+      "target_type": "随机单体",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.6,
+      "energy_cost": 100,
+      "hit_count": 4,
+      "retarget_per_hit": true,
+      "damage_by_level": {
+        "1": 1.6,
+        "2": 2.0,
+        "3": 2.4,
+        "4": 2.4
+      },
+      "params": {
+        "apply_effects_each_hit": true
+      },
+      "effects": [
+        {
+          "effect_type": "bleed",
+          "value": 0.5,
+          "duration": 3,
+          "chance": 1.0
+        }
+      ]
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_zhang_jiao",
+    "name": "张角",
+    "camp": "群",
+    "profession": "法术输出",
+    "role": "法师",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "base_stats": {
+      "hp": 1920,
+      "attack": 252,
+      "defense": 88,
+      "speed": 116,
+      "crit_rate": 0.18,
+      "crit_damage": 0.9,
+      "armor_break": 0.1,
+      "effect_hit": 0.16,
+      "effect_resist": 0.09
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_zhang_jiao_normal",
+      "name": "天道不公",
+      "skill_type": "被动",
+      "target_type": "随机3人",
+      "target_side": "enemy",
+      "trigger_timing": "回合开始",
+      "damage_coefficient": 0.7,
+      "energy_cost": 0,
+      "damage_by_level": {
+        "1": 0.7,
+        "2": 0.95,
+        "3": 1.2,
+        "4": 1.35
+      },
+      "params": {
+        "skill_tags": [
+          "lightning"
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_zhang_jiao_passive_1",
+        "name": "天道馈赠",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "gain_energy_on_skill_tag",
+              "value": 5,
+              "duration": 0,
+              "params": {
+                "required_skill_tag": "lightning"
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "gain_energy_on_skill_tag",
+              "value": 7,
+              "duration": 0,
+              "params": {
+                "required_skill_tag": "lightning"
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "gain_energy_on_skill_tag",
+              "value": 10,
+              "duration": 0,
+              "params": {
+                "required_skill_tag": "lightning"
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "gain_energy_on_skill_tag",
+              "value": 10,
+              "duration": 0,
+              "params": {
+                "required_skill_tag": "lightning"
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_zhang_jiao_passive_2",
+        "name": "怒雷",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.3,
+              "params": {
+                "required_skill_id": "skill_zhang_jiao_normal",
+                "status_effect_type": "lightning_mark",
+                "status_duration": 2,
+                "status_value": 1.0,
+                "status_params": {
+                  "ally_trigger_chance": 0.0,
+                  "splash_count": 2
+                }
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.4,
+              "params": {
+                "required_skill_id": "skill_zhang_jiao_normal",
+                "status_effect_type": "lightning_mark",
+                "status_duration": 2,
+                "status_value": 1.0,
+                "status_params": {
+                  "ally_trigger_chance": 0.3,
+                  "splash_count": 2
+                }
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.2,
+              "duration": 2,
+              "chance": 0.5,
+              "params": {
+                "required_skill_id": "skill_zhang_jiao_normal",
+                "status_effect_type": "lightning_mark",
+                "status_duration": 2,
+                "status_value": 1.2,
+                "status_params": {
+                  "ally_trigger_chance": 0.3,
+                  "splash_count": 2
+                }
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.2,
+              "duration": 2,
+              "chance": 0.5,
+              "params": {
+                "required_skill_id": "skill_zhang_jiao_normal",
+                "status_effect_type": "lightning_mark",
+                "status_duration": 2,
+                "status_value": 1.2,
+                "status_params": {
+                  "ally_trigger_chance": 0.3,
+                  "splash_count": 2
+                },
+                "guaranteed_first_target": true
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_zhang_jiao_ultimate",
+      "name": "五雷轰顶",
+      "skill_type": "必杀",
+      "target_type": "全体",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.2,
+      "energy_cost": 100,
+      "damage_by_level": {
+        "1": 1.2,
+        "2": 1.5,
+        "3": 1.8,
+        "4": 1.8
+      },
+      "params": {
+        "skill_tags": [
+          "lightning"
+        ]
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_random_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "count": 3,
+              "status_effect_type": "lightning_mark",
+              "status_duration": 2,
+              "status_value": 1.0,
+              "status_params": {
+                "ally_trigger_chance": 0.0,
+                "splash_count": 2
+              }
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_random_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "count": 3,
+              "status_effect_type": "lightning_mark",
+              "status_duration": 2,
+              "status_value": 1.0,
+              "status_params": {
+                "ally_trigger_chance": 0.3,
+                "splash_count": 2
+              }
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_random_status_to_side",
+            "value": 1.2,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "count": 3,
+              "status_effect_type": "lightning_mark",
+              "status_duration": 2,
+              "status_value": 1.2,
+              "status_params": {
+                "ally_trigger_chance": 0.3,
+                "splash_count": 2
+              }
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_random_status_to_side",
+            "value": 1.2,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "count": 3,
+              "status_effect_type": "lightning_mark",
+              "status_duration": 2,
+              "status_value": 1.2,
+              "status_params": {
+                "ally_trigger_chance": 0.3,
+                "splash_count": 2
+              }
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_meng_huo",
+    "name": "孟获",
+    "camp": "群",
+    "profession": "坦克",
+    "role": "先锋",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_1"
+    ],
+    "base_stats": {
+      "hp": 2780,
+      "attack": 186,
+      "defense": 156,
+      "speed": 92,
+      "crit_rate": 0.08,
+      "crit_damage": 0.6,
+      "armor_break": 0.06,
+      "effect_hit": 0.06,
+      "effect_resist": 0.14
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_meng_huo_normal",
+      "name": "蛮王滕甲",
+      "skill_type": "被动",
+      "target_type": "全体",
+      "target_side": "ally",
+      "trigger_timing": "战斗开始",
+      "damage_coefficient": 0.0,
+      "energy_cost": 0,
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.2,
+            "duration": 5
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.3,
+            "duration": 5
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.4,
+            "duration": 5
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "defense_bonus",
+            "value": 0.5,
+            "duration": 5
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_meng_huo_passive_1",
+        "name": "巨熊之力",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "protect_highest_attack_ally",
+              "value": 0.2,
+              "duration": -1,
+              "params": {
+                "exclude_self": true
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "protect_highest_attack_ally",
+              "value": 0.3,
+              "duration": -1,
+              "params": {
+                "exclude_self": true
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "protect_highest_attack_ally",
+              "value": 0.4,
+              "duration": -1,
+              "params": {
+                "exclude_self": true
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "protect_highest_attack_ally",
+              "value": 0.4,
+              "duration": -1,
+              "params": {
+                "exclude_self": true,
+                "linked_damage_reduction": 0.15
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_meng_huo_passive_2",
+        "name": "坚如磐石",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "conditional_damage_reduction",
+              "value": 0.3,
+              "duration": -1,
+              "params": {
+                "max_hp_ratio": 0.6
+              }
+            },
+            {
+              "effect_type": "conditional_damage_reduction",
+              "value": 0.45,
+              "duration": -1,
+              "params": {
+                "max_hp_ratio": 0.3
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "conditional_damage_reduction",
+              "value": 0.3,
+              "duration": -1,
+              "params": {
+                "max_hp_ratio": 0.6
+              }
+            },
+            {
+              "effect_type": "conditional_damage_reduction",
+              "value": 0.6,
+              "duration": -1,
+              "params": {
+                "max_hp_ratio": 0.3
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "conditional_damage_reduction",
+              "value": 0.4,
+              "duration": -1,
+              "params": {
+                "max_hp_ratio": 0.6
+              }
+            },
+            {
+              "effect_type": "conditional_damage_reduction",
+              "value": 0.6,
+              "duration": -1,
+              "params": {
+                "max_hp_ratio": 0.3
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "conditional_damage_reduction",
+              "value": 0.4,
+              "duration": -1,
+              "params": {
+                "max_hp_ratio": 0.6
+              }
+            },
+            {
+              "effect_type": "conditional_damage_reduction",
+              "value": 0.6,
+              "duration": -1,
+              "params": {
+                "max_hp_ratio": 0.3
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_meng_huo_ultimate",
+      "name": "南蛮入侵",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 100,
+      "damage_by_level": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 2.0,
+        "4": 2.0
+      },
+      "params": {
+        "apply_effects_on_first_target_only": true
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "grant_team_shield",
+            "value": 0.18,
+            "duration": 2,
+            "params": {
+              "scale_stat": "max_hp"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "grant_team_shield",
+            "value": 0.22,
+            "duration": 2,
+            "params": {
+              "scale_stat": "max_hp",
+              "heal_ratio_if_has_shield": 0.1
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "grant_team_shield",
+            "value": 0.25,
+            "duration": 2,
+            "params": {
+              "scale_stat": "max_hp",
+              "heal_ratio_if_has_shield": 0.1
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "grant_team_shield",
+            "value": 0.25,
+            "duration": 2,
+            "params": {
+              "scale_stat": "max_hp",
+              "heal_ratio_if_has_shield": 0.1
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_sun_ce",
+    "name": "孙策",
+    "camp": "吴",
+    "profession": "坦克",
+    "role": "先锋",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_1"
+    ],
+    "base_stats": {
+      "hp": 2680,
+      "attack": 214,
+      "defense": 148,
+      "speed": 108,
+      "crit_rate": 0.12,
+      "crit_damage": 0.75,
+      "armor_break": 0.18,
+      "effect_hit": 0.05,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_sun_ce_normal",
+      "name": "怒潮连掷",
+      "skill_type": "被动",
+      "target_type": "同列首个",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 2.0,
+      "energy_cost": 0,
+      "hit_count": 3,
+      "damage_by_level": {
+        "1": 2.0,
+        "2": 2.0,
+        "3": 3.0,
+        "4": 3.0
+      },
+      "hit_count_by_level": {
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3
+      },
+      "params": {
+        "bonus_hit_count_from_status": "sun_ce_spear_bonus",
+        "kill_bonus_hit_count_status": "sun_ce_spear_bonus",
+        "kill_bonus_hit_count_by_level": {
+          "2": 1,
+          "3": 1,
+          "4": 2
+        },
+        "kill_bonus_action_name": "长枪增势"
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_sun_ce_passive_1",
+        "name": "英魂护佑",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "回合开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "damage_reduction_from_stat",
+              "value": 0.3,
+              "duration": 1,
+              "params": {
+                "stat_name": "armor_break"
+              }
+            },
+            {
+              "effect_type": "shield_by_stats",
+              "value": 1.0,
+              "duration": 1,
+              "params": {
+                "max_hp_ratio": 0.03
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "damage_reduction_from_stat",
+              "value": 0.4,
+              "duration": 1,
+              "params": {
+                "stat_name": "armor_break"
+              }
+            },
+            {
+              "effect_type": "shield_by_stats",
+              "value": 2.0,
+              "duration": 1,
+              "params": {
+                "max_hp_ratio": 0.06
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "damage_reduction_from_stat",
+              "value": 0.5,
+              "duration": 1,
+              "params": {
+                "stat_name": "armor_break"
+              }
+            },
+            {
+              "effect_type": "shield_by_stats",
+              "value": 3.0,
+              "duration": 1,
+              "params": {
+                "max_hp_ratio": 0.09
+              }
+            },
+            {
+              "effect_type": "grant_team_frontline_damage_bonus",
+              "value": 0.25,
+              "duration": 1
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "damage_reduction_from_stat",
+              "value": 0.6,
+              "duration": 1,
+              "params": {
+                "stat_name": "armor_break"
+              }
+            },
+            {
+              "effect_type": "shield_by_stats",
+              "value": 4.0,
+              "duration": 1,
+              "params": {
+                "max_hp_ratio": 0.12
+              }
+            },
+            {
+              "effect_type": "grant_team_frontline_damage_bonus",
+              "value": 0.25,
+              "duration": 1
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_sun_ce_passive_2",
+        "name": "激昂战意",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "gain_stack_when_column_front_enemy_damaged",
+              "value": 1.0,
+              "duration": -1,
+              "chance": 0.5,
+              "params": {
+                "stack_name": "sun_ce_battle_fury",
+                "max_stacks": 15,
+                "action_name": "激昂叠加"
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "gain_stack_when_column_front_enemy_damaged",
+              "value": 1.0,
+              "duration": -1,
+              "chance": 0.7,
+              "params": {
+                "stack_name": "sun_ce_battle_fury",
+                "max_stacks": 15,
+                "action_name": "激昂叠加"
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "gain_stack_when_column_front_enemy_damaged",
+              "value": 1.0,
+              "duration": -1,
+              "chance": 1.0,
+              "params": {
+                "stack_name": "sun_ce_battle_fury",
+                "max_stacks": 15,
+                "action_name": "激昂叠加"
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "gain_stack_when_column_front_enemy_damaged",
+              "value": 1.0,
+              "duration": -1,
+              "chance": 1.0,
+              "params": {
+                "stack_name": "sun_ce_battle_fury",
+                "max_stacks": 15,
+                "action_name": "激昂叠加"
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_sun_ce_ultimate",
+      "name": "霸王讨逆",
+      "skill_type": "必杀",
+      "target_type": "同列首个",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.2,
+      "energy_cost": 100,
+      "hit_count": 3,
+      "damage_by_level": {
+        "1": 1.2,
+        "2": 1.5,
+        "3": 2.0,
+        "4": 2.0
+      },
+      "hit_count_by_level": {
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3
+      },
+      "params": {
+        "bonus_hit_count_from_status": "sun_ce_battle_fury",
+        "bonus_armor_break_from_status": "sun_ce_battle_fury",
+        "armor_break_per_stack": 0.05,
+        "consume_status_on_cast": "sun_ce_battle_fury"
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "backline_burst_if_first_target_backline",
+            "value": 3.0,
+            "duration": 0,
+            "params": {
+              "action_name": "战意爆发"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "backline_burst_if_first_target_backline",
+            "value": 4.5,
+            "duration": 0,
+            "params": {
+              "action_name": "战意爆发"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "backline_burst_if_first_target_backline",
+            "value": 6.0,
+            "duration": 0,
+            "params": {
+              "action_name": "战意爆发"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "backline_burst_if_first_target_backline",
+            "value": 6.0,
+            "duration": 0,
+            "params": {
+              "action_name": "战意爆发"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_sun_quan",
+    "name": "孙权",
+    "camp": "吴",
+    "profession": "治疗",
+    "role": "辅助",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_1"
+    ],
+    "base_stats": {
+      "hp": 2260,
+      "attack": 198,
+      "defense": 118,
+      "speed": 112,
+      "crit_rate": 0.1,
+      "crit_damage": 0.7,
+      "armor_break": 0.08,
+      "effect_hit": 0.1,
+      "effect_resist": 0.1
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_sun_quan_normal",
+      "name": "剑指天下",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.6,
+      "energy_cost": 0,
+      "damage_by_level": {
+        "1": 0.6,
+        "2": 0.8,
+        "3": 1.0,
+        "4": 1.0
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status",
+            "value": 0.04,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "incoming_damage_bonus",
+              "status_duration": 3,
+              "status_value": 0.04,
+              "max_stacks": 6
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status",
+            "value": 0.06,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "incoming_damage_bonus",
+              "status_duration": 3,
+              "status_value": 0.06,
+              "max_stacks": 6
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status",
+            "value": 0.08,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "incoming_damage_bonus",
+              "status_duration": 3,
+              "status_value": 0.08,
+              "max_stacks": 6
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status",
+            "value": 0.08,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "incoming_damage_bonus",
+              "status_duration": 3,
+              "status_value": 0.08,
+              "max_stacks": 8
+            }
+          }
+        ]
+      },
+      "params": {
+        "apply_effects_each_hit": true,
+        "convert_to_random_hits_if_frontline_below": 3,
+        "converted_hit_count": 4
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_sun_quan_passive_1",
+        "name": "气吞万里",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "follow_up_on_ally_actions",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "required_actions": 4,
+                "per_round_limit": 4,
+                "granted_stack_name": "sun_quan_heroism",
+                "granted_stack_amount": 1,
+                "granted_stack_duration": 3,
+                "granted_stack_max": 4,
+                "granted_stack_action_name": "豪气叠加"
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "follow_up_on_ally_actions",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "required_actions": 4,
+                "per_round_limit": 4,
+                "granted_stack_name": "sun_quan_heroism",
+                "granted_stack_amount": 1,
+                "granted_stack_duration": 3,
+                "granted_stack_max": 4,
+                "granted_stack_action_name": "豪气叠加"
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "follow_up_on_ally_actions",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "required_actions": 4,
+                "per_round_limit": 4,
+                "granted_stack_name": "sun_quan_heroism",
+                "granted_stack_amount": 1,
+                "granted_stack_duration": 3,
+                "granted_stack_max": 4,
+                "granted_stack_action_name": "豪气叠加"
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "follow_up_on_ally_actions",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "required_actions": 4,
+                "per_round_limit": 4,
+                "granted_stack_name": "sun_quan_heroism",
+                "granted_stack_amount": 1,
+                "granted_stack_duration": 3,
+                "granted_stack_max": 4,
+                "granted_stack_action_name": "豪气叠加"
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_sun_quan_passive_2",
+        "name": "制衡之术",
+        "skill_type": "被动",
+        "target_type": "血量最低2名",
+        "target_side": "ally",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "params": {
+          "requires_last_skill_type": "追击"
+        },
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "heal_by_caster_max_hp",
+              "value": 0.06,
+              "duration": 0
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "heal_by_caster_max_hp",
+              "value": 0.08,
+              "duration": 0
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "heal_by_caster_max_hp",
+              "value": 0.1,
+              "duration": 0
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "heal_by_caster_max_hp",
+              "value": 0.12,
+              "duration": 0
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_sun_quan_ultimate",
+      "name": "雄踞江东",
+      "skill_type": "必杀",
+      "target_type": "同排友军",
+      "target_side": "ally",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 0.0,
+      "energy_cost": 100,
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "same_row_command_buff",
+            "value": 0.1,
+            "duration": 3,
+            "params": {
+              "duration": 3,
+              "shield_ratio": 0.1,
+              "energy_gain": 50,
+              "energy_gain_chance": 0.3,
+              "stack_name": "sun_quan_heroism"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "same_row_command_buff",
+            "value": 0.16,
+            "duration": 3,
+            "params": {
+              "duration": 3,
+              "shield_ratio": 0.16,
+              "energy_gain": 50,
+              "energy_gain_chance": 0.4,
+              "stack_name": "sun_quan_heroism"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "same_row_command_buff",
+            "value": 0.16,
+            "duration": 3,
+            "params": {
+              "duration": 3,
+              "shield_ratio": 0.16,
+              "attack_bonus_per_stack": 0.08,
+              "shield_ratio_per_stack": 0.08,
+              "energy_gain": 50,
+              "energy_gain_chance": 0.5,
+              "stack_name": "sun_quan_heroism"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "same_row_command_buff",
+            "value": 0.16,
+            "duration": 3,
+            "params": {
+              "duration": 3,
+              "shield_ratio": 0.16,
+              "attack_bonus_per_stack": 0.08,
+              "shield_ratio_per_stack": 0.08,
+              "energy_gain": 50,
+              "energy_gain_chance": 0.5,
+              "stack_name": "sun_quan_heroism"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_guo_jia",
+    "name": "郭嘉",
+    "camp": "魏",
+    "profession": "物理输出",
+    "role": "奇袭",
+    "hero_quality": "S+",
+    "awakening_level": "传说",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_2"
+    ],
+    "base_stats": {
+      "hp": 1960,
+      "attack": 256,
+      "defense": 92,
+      "speed": 124,
+      "crit_rate": 0.22,
+      "crit_damage": 0.95,
+      "armor_break": 0.14,
+      "effect_hit": 0.1,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_guo_jia_normal",
+      "name": "棋影绝杀",
+      "skill_type": "被动",
+      "target_type": "血量最低",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 2.4,
+      "energy_cost": 0,
+      "damage_by_level": {
+        "1": 2.4,
+        "2": 3.2,
+        "3": 4.0,
+        "4": 4.0
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.01,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 5
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.03,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 15
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.05,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 25
+            }
+          },
+          {
+            "effect_type": "grant_stack",
+            "value": 1.0,
+            "duration": 3,
+            "status_filter": "guo_jia_chess_shadow",
+            "params": {
+              "stack_name": "guo_jia_chess_shadow",
+              "target": "self"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "percent_hp_damage",
+            "value": 0.05,
+            "duration": 0,
+            "params": {
+              "cap_attack_multiplier": 25
+            }
+          },
+          {
+            "effect_type": "grant_stack",
+            "value": 2.0,
+            "duration": 3,
+            "status_filter": "guo_jia_chess_shadow",
+            "params": {
+              "stack_name": "guo_jia_chess_shadow",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_guo_jia_passive_1",
+        "name": "星谋棋略",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "guo_jia_shadow_reaction",
+              "value": 1.8,
+              "duration": 0,
+              "params": {
+                "percent_hp_damage": 0.01,
+                "cap_attack_multiplier": 5,
+                "low_hp_threshold": 0.6,
+                "crit_damage_bonus_per_stack": 0.24,
+                "crit_damage_bonus_max_stacks": 3
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "guo_jia_shadow_reaction",
+              "value": 2.4,
+              "duration": 0,
+              "params": {
+                "percent_hp_damage": 0.03,
+                "cap_attack_multiplier": 15,
+                "low_hp_threshold": 0.6,
+                "crit_damage_bonus_per_stack": 0.32,
+                "crit_damage_bonus_max_stacks": 3
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "guo_jia_shadow_reaction",
+              "value": 3.0,
+              "duration": 0,
+              "params": {
+                "percent_hp_damage": 0.05,
+                "cap_attack_multiplier": 25,
+                "low_hp_threshold": 0.6,
+                "crit_damage_bonus_per_stack": 0.4,
+                "crit_damage_bonus_max_stacks": 3,
+                "invincible_pierce_ratio": 0.5
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "guo_jia_shadow_reaction",
+              "value": 3.0,
+              "duration": 0,
+              "params": {
+                "percent_hp_damage": 0.05,
+                "cap_attack_multiplier": 25,
+                "low_hp_threshold": 0.6,
+                "crit_damage_bonus_per_stack": 0.4,
+                "crit_damage_bonus_max_stacks": 3,
+                "invincible_pierce_ratio": 0.5
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_guo_jia_passive_2",
+        "name": "谋弈天下",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "回合开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.16,
+              "duration": 1
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.24,
+              "duration": 1
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.3,
+              "duration": 1
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.3,
+              "duration": 1
+            },
+            {
+              "effect_type": "survive_once",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "invincible_duration": 1,
+                "heal_attack_ratio": 5.0,
+                "once_per_battle": true,
+                "used_marker_effect_type": "guo_jia_survive_once_used"
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_guo_jia_ultimate",
+      "name": "棋破万军",
+      "skill_type": "必杀",
+      "target_type": "生命百分比最低",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 3.0,
+      "energy_cost": 100,
+      "damage_by_level": {
+        "1": 3.0,
+        "2": 4.0,
+        "3": 5.0,
+        "4": 5.0
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "guo_jia_ultimate_splash",
+            "value": 0.6,
+            "duration": 0
+          },
+          {
+            "effect_type": "grant_stack",
+            "value": 5.0,
+            "duration": 3,
+            "status_filter": "guo_jia_chess_shadow",
+            "params": {
+              "stack_name": "guo_jia_chess_shadow",
+              "target": "self"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "guo_jia_ultimate_splash",
+            "value": 0.8,
+            "duration": 0
+          },
+          {
+            "effect_type": "grant_stack",
+            "value": 5.0,
+            "duration": 3,
+            "status_filter": "guo_jia_chess_shadow",
+            "params": {
+              "stack_name": "guo_jia_chess_shadow",
+              "target": "self"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "guo_jia_ultimate_splash",
+            "value": 1.0,
+            "duration": 0
+          },
+          {
+            "effect_type": "grant_stack",
+            "value": 5.0,
+            "duration": 3,
+            "status_filter": "guo_jia_chess_shadow",
+            "params": {
+              "stack_name": "guo_jia_chess_shadow",
+              "target": "self"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "guo_jia_ultimate_splash",
+            "value": 1.0,
+            "duration": 0
+          },
+          {
+            "effect_type": "grant_stack",
+            "value": 5.0,
+            "duration": 3,
+            "status_filter": "guo_jia_chess_shadow",
+            "params": {
+              "stack_name": "guo_jia_chess_shadow",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_guan_yinping",
+    "name": "关银屏",
+    "camp": "蜀",
+    "profession": "治疗",
+    "role": "辅助",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_1",
+      "passive_2"
+    ],
+    "base_stats": {
+      "hp": 2580,
+      "attack": 168,
+      "defense": 112,
+      "speed": 103,
+      "crit_rate": 0.1,
+      "crit_damage": 0.68,
+      "armor_break": 0.05,
+      "effect_hit": 0.08,
+      "effect_resist": 0.16
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_guan_yinping_normal",
+      "name": "暂避锋芒",
+      "skill_type": "被动",
+      "target_type": "自身",
+      "target_side": "self",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.0,
+      "energy_cost": 0,
+      "level": 1,
+      "params": {
+        "reactive_trigger": "生命降低后"
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "retreat_on_low_hp_once",
+            "value": 1.0,
+            "duration": 1,
+            "params": {
+              "hp_threshold": 0.3,
+              "invincible_duration": 1,
+              "become_untargetable": false,
+              "heal_ratio": 0.0,
+              "heal_scale": "self_max_hp",
+              "heal_action_name": "整装归来"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "retreat_on_low_hp_once",
+            "value": 1.0,
+            "duration": 1,
+            "params": {
+              "hp_threshold": 0.3,
+              "invincible_duration": 1,
+              "become_untargetable": false,
+              "heal_ratio": 0.2,
+              "heal_scale": "self_max_hp",
+              "heal_action_name": "整装归来"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "retreat_on_low_hp_once",
+            "value": 1.0,
+            "duration": 1,
+            "params": {
+              "hp_threshold": 0.3,
+              "invincible_duration": 1,
+              "become_untargetable": false,
+              "heal_ratio": 0.3,
+              "heal_scale": "self_max_hp",
+              "heal_action_name": "整装归来"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "retreat_on_low_hp_once",
+            "value": 1.0,
+            "duration": 1,
+            "params": {
+              "hp_threshold": 0.3,
+              "invincible_duration": 1,
+              "become_untargetable": false,
+              "heal_ratio": 0.3,
+              "heal_scale": "self_max_hp",
+              "heal_action_name": "整装归来"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_guan_yinping_passive_1",
+        "name": "深根固本",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "max_hp_bonus",
+              "value": 0.3,
+              "duration": -1
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "max_hp_bonus",
+              "value": 0.4,
+              "duration": -1
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "max_hp_bonus",
+              "value": 0.5,
+              "duration": -1
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "max_hp_bonus",
+              "value": 0.6,
+              "duration": -1
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_guan_yinping_passive_2",
+        "name": "重整旗鼓",
+        "skill_type": "被动",
+        "target_type": "友方",
+        "target_side": "ally",
+        "trigger_timing": "友军阵亡后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "revive_ally_next_round",
+              "value": 0.3,
+              "duration": 1,
+              "params": {
+                "heal_ratio": 0.3,
+                "heal_scale": "source_max_hp",
+                "max_triggers": 1,
+                "prepare_action_name": "重整筹备",
+                "action_name": "重整旗鼓"
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "revive_ally_next_round",
+              "value": 0.5,
+              "duration": 1,
+              "params": {
+                "heal_ratio": 0.5,
+                "heal_scale": "source_max_hp",
+                "max_triggers": 1,
+                "prepare_action_name": "重整筹备",
+                "action_name": "重整旗鼓"
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "revive_ally_next_round",
+              "value": 0.5,
+              "duration": 1,
+              "params": {
+                "heal_ratio": 0.5,
+                "heal_scale": "source_max_hp",
+                "max_triggers": 2,
+                "cooldown_rounds": 1,
+                "prepare_action_name": "重整筹备",
+                "action_name": "重整旗鼓"
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "revive_ally_next_round",
+              "value": 0.5,
+              "duration": 1,
+              "params": {
+                "heal_ratio": 0.5,
+                "heal_scale": "source_max_hp",
+                "max_triggers": 3,
+                "cooldown_rounds": 1,
+                "prepare_action_name": "重整筹备",
+                "action_name": "重整旗鼓"
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_guan_yinping_ultimate",
+      "name": "怒不可遏",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 2.5,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "1": 2.5,
+        "2": 2.5,
+        "3": 3.5,
+        "4": 3.5
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "row_filter": "frontline",
+              "status_effect_type": "anger_mark",
+              "status_duration": 2,
+              "status_value": 0.2,
+              "status_params": {
+                "hit_threshold": 3,
+                "hits_taken": 0,
+                "lost_hp_damage_ratio": 0.2,
+                "action_name": "怒意标记"
+              }
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "row_filter": "frontline",
+              "status_effect_type": "anger_mark",
+              "status_duration": 2,
+              "status_value": 0.3,
+              "status_params": {
+                "hit_threshold": 3,
+                "hits_taken": 0,
+                "lost_hp_damage_ratio": 0.3,
+                "action_name": "怒意标记"
+              }
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "row_filter": "frontline",
+              "status_effect_type": "anger_mark",
+              "status_duration": 2,
+              "status_value": 0.3,
+              "status_params": {
+                "hit_threshold": 3,
+                "hits_taken": 0,
+                "lost_hp_damage_ratio": 0.3,
+                "action_name": "怒意标记"
+              }
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "row_filter": "frontline",
+              "status_effect_type": "anger_mark",
+              "status_duration": 2,
+              "status_value": 0.3,
+              "status_params": {
+                "hit_threshold": 3,
+                "hits_taken": 0,
+                "lost_hp_damage_ratio": 0.3,
+                "action_name": "怒意标记"
+              }
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_da_qiao",
+    "name": "大乔",
+    "camp": "吴",
+    "profession": "治疗",
+    "role": "辅助",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_1",
+      "passive_2"
+    ],
+    "base_stats": {
+      "hp": 2320,
+      "attack": 178,
+      "defense": 102,
+      "speed": 109,
+      "crit_rate": 0.1,
+      "crit_damage": 0.7,
+      "armor_break": 0.05,
+      "effect_hit": 0.1,
+      "effect_resist": 0.14
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_da_qiao_normal",
+      "name": "虚弱之舞",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.8,
+      "energy_cost": 0,
+      "level": 1,
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "defense_bonus",
+              "status_duration": 3,
+              "status_value": -0.08
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "defense_bonus",
+              "status_duration": 3,
+              "status_value": -0.1
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "defense_bonus",
+              "status_duration": 3,
+              "status_value": -0.12
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "defense_bonus",
+              "status_duration": 3,
+              "status_value": -0.12
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_da_qiao_passive_1",
+        "name": "翩跹之舞",
+        "skill_type": "被动",
+        "target_type": "全体",
+        "target_side": "ally",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "defense_bonus",
+                "status_duration": 3,
+                "status_value": 0.1
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "defense_bonus",
+                "status_duration": 3,
+                "status_value": 0.15
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "defense_bonus",
+                "status_duration": 3,
+                "status_value": 0.2
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "defense_bonus",
+                "status_duration": 3,
+                "status_value": 0.25
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_da_qiao_passive_2",
+        "name": "治愈舞姿",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "生命降低后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "rescue_on_hp_threshold_or_death_once",
+              "value": 1.0,
+              "duration": 0,
+              "params": {
+                "hp_threshold": 0.5,
+                "trigger_on_death": true,
+                "action_name": "治愈舞姿"
+              }
+            },
+            {
+              "effect_type": "heal_side",
+              "value": 3.0,
+              "duration": 0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "scale": "attack",
+                "action_name": "治愈舞姿"
+              }
+            },
+            {
+              "effect_type": "clear_status_from_side",
+              "value": 99,
+              "duration": 0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_filter": "control"
+              }
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 1,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "control_immunity",
+                "status_duration": 1,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "rescue_on_hp_threshold_or_death_once",
+              "value": 1.0,
+              "duration": 0,
+              "params": {
+                "hp_threshold": 0.5,
+                "trigger_on_death": true,
+                "action_name": "治愈舞姿"
+              }
+            },
+            {
+              "effect_type": "heal_side",
+              "value": 4.0,
+              "duration": 0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "scale": "attack",
+                "action_name": "治愈舞姿"
+              }
+            },
+            {
+              "effect_type": "clear_status_from_side",
+              "value": 99,
+              "duration": 0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_filter": "control"
+              }
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 1,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "control_immunity",
+                "status_duration": 1,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "rescue_on_hp_threshold_or_death_once",
+              "value": 1.0,
+              "duration": 0,
+              "params": {
+                "hp_threshold": 0.5,
+                "trigger_on_death": true,
+                "action_name": "治愈舞姿"
+              }
+            },
+            {
+              "effect_type": "heal_side",
+              "value": 5.0,
+              "duration": 0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "scale": "attack",
+                "action_name": "治愈舞姿"
+              }
+            },
+            {
+              "effect_type": "clear_status_from_side",
+              "value": 99,
+              "duration": 0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_filter": "control"
+              }
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 1,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "control_immunity",
+                "status_duration": 1,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "rescue_on_hp_threshold_or_death_once",
+              "value": 1.0,
+              "duration": 0,
+              "params": {
+                "hp_threshold": 0.5,
+                "trigger_on_death": true,
+                "action_name": "治愈舞姿"
+              }
+            },
+            {
+              "effect_type": "heal_side",
+              "value": 5.5,
+              "duration": 0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "scale": "attack",
+                "action_name": "治愈舞姿"
+              }
+            },
+            {
+              "effect_type": "clear_status_from_side",
+              "value": 99,
+              "duration": 0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_filter": "control"
+              }
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 1,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "control_immunity",
+                "status_duration": 1,
+                "status_value": 1.0
+              }
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "heal_over_time",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "heal_scale": "source_attack",
+                  "action_name": "舞姿回春"
+                }
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_da_qiao_ultimate",
+      "name": "振奋之舞",
+      "skill_type": "必杀",
+      "target_type": "前排随机2名",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "1": 1.0,
+        "2": 1.5,
+        "3": 2.0,
+        "4": 2.0
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "attack_bonus",
+              "status_duration": 3,
+              "status_value": 0.1
+            }
+          },
+          {
+            "effect_type": "clear_status_from_side",
+            "value": 99,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_filter": "damage_over_time"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "attack_bonus",
+              "status_duration": 3,
+              "status_value": 0.15
+            }
+          },
+          {
+            "effect_type": "clear_status_from_side",
+            "value": 99,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_filter": "damage_over_time"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "attack_bonus",
+              "status_duration": 3,
+              "status_value": 0.2
+            }
+          },
+          {
+            "effect_type": "clear_status_from_side",
+            "value": 99,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_filter": "damage_over_time"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "attack_bonus",
+              "status_duration": 3,
+              "status_value": 0.2
+            }
+          },
+          {
+            "effect_type": "clear_status_from_side",
+            "value": 99,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_filter": "damage_over_time"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_zhang_xingcai",
+    "name": "张星彩",
+    "camp": "蜀",
+    "profession": "法术输出",
+    "role": "法师",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_1"
+    ],
+    "base_stats": {
+      "hp": 2140,
+      "attack": 188,
+      "defense": 96,
+      "speed": 111,
+      "crit_rate": 0.12,
+      "crit_damage": 0.82,
+      "armor_break": 0.08,
+      "effect_hit": 0.14,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_zhang_xingcai_normal",
+      "name": "将门虎女",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.6,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "1": 0.6,
+        "2": 0.8,
+        "3": 1.0,
+        "4": 1.2
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_zhang_xingcai_passive_1",
+        "name": "木之印记",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 0.3,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "wood_mark",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "attack_trigger_control_chance": 0.15
+                }
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 0.3,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "wood_mark",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "attack_trigger_control_chance": 0.15
+                }
+              }
+            },
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 0.3,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "defense_bonus",
+                "status_duration": 3,
+                "status_value": -0.2
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 0.5,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "wood_mark",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "attack_trigger_control_chance": 0.15
+                }
+              }
+            },
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 0.5,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "defense_bonus",
+                "status_duration": 3,
+                "status_value": -0.2
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 0.9,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "wood_mark",
+                "status_duration": 3,
+                "status_value": 1.0,
+                "status_params": {
+                  "attack_trigger_control_chance": 0.15
+                }
+              }
+            },
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 0.9,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "defense_bonus",
+                "status_duration": 3,
+                "status_value": -0.2
+              }
+            },
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 0.9,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "speed_bonus",
+                "status_duration": 3,
+                "status_value": -0.2
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_zhang_xingcai_passive_2",
+        "name": "先发制敌",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.35,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "stun",
+                "status_duration": 2,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.4,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "stun",
+                "status_duration": 2,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.5,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "stun",
+                "status_duration": 2,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.5,
+              "params": {
+                "required_skill_id": "skill_zhang_xingcai_normal",
+                "status_effect_type": "stun",
+                "status_duration": 2,
+                "status_value": 1.0
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_zhang_xingcai_ultimate",
+      "name": "草木皆兵",
+      "skill_type": "必杀",
+      "target_type": "全体",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "1": 1.0,
+        "2": 1.2,
+        "3": 1.5,
+        "4": 1.5
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "wood_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "attack_trigger_control_chance": 0.15
+              }
+            }
+          },
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "defense_bonus",
+              "status_duration": 3,
+              "status_value": -0.2
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "wood_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "attack_trigger_control_chance": 0.2
+              }
+            }
+          },
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "defense_bonus",
+              "status_duration": 3,
+              "status_value": -0.2
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "wood_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "attack_trigger_control_chance": 0.25
+              }
+            }
+          },
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "defense_bonus",
+              "status_duration": 3,
+              "status_value": -0.2
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "wood_mark",
+              "status_duration": 3,
+              "status_value": 1.0,
+              "status_params": {
+                "attack_trigger_control_chance": 0.25
+              }
+            }
+          },
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 3,
+            "chance": 1.0,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "defense_bonus",
+              "status_duration": 3,
+              "status_value": -0.2
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_cao_ren",
+    "name": "曹仁",
+    "camp": "魏",
+    "profession": "坦克",
+    "role": "先锋",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_2"
+    ],
+    "base_stats": {
+      "hp": 2680,
+      "attack": 162,
+      "defense": 152,
+      "speed": 95,
+      "crit_rate": 0.08,
+      "crit_damage": 0.62,
+      "armor_break": 0.06,
+      "effect_hit": 0.08,
+      "effect_resist": 0.16
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_cao_ren_normal",
+      "name": "英勇反击",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.0,
+      "energy_cost": 0,
+      "level": 1,
+      "params": {
+        "reactive_trigger": "受击后"
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "counterattack_on_receive_attack",
+            "value": 0.8,
+            "duration": 0,
+            "params": {
+              "action_name": "英勇反击"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "counterattack_on_receive_attack",
+            "value": 1.0,
+            "duration": 0,
+            "params": {
+              "action_name": "英勇反击"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "counterattack_on_receive_attack",
+            "value": 1.2,
+            "duration": 0,
+            "params": {
+              "action_name": "英勇反击"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "counterattack_on_receive_attack",
+            "value": 1.4,
+            "duration": 0,
+            "params": {
+              "action_name": "英勇反击"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_cao_ren_passive_1",
+        "name": "英勇不屈",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "defense_bonus",
+              "value": 0.3,
+              "duration": -1
+            },
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.15,
+              "duration": -1
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "defense_bonus",
+              "value": 0.4,
+              "duration": -1
+            },
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.2,
+              "duration": -1
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "defense_bonus",
+              "value": 0.5,
+              "duration": -1
+            },
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.25,
+              "duration": -1
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "defense_bonus",
+              "value": 0.5,
+              "duration": -1
+            },
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.25,
+              "duration": -1
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_cao_ren_passive_2",
+        "name": "巨盾冲击",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "受击后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_to_attacker_on_receive_attack",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.1,
+              "params": {
+                "status_effect_type": "stun",
+                "status_duration": 2,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_to_attacker_on_receive_attack",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.15,
+              "params": {
+                "status_effect_type": "stun",
+                "status_duration": 2,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_to_attacker_on_receive_attack",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.2,
+              "params": {
+                "status_effect_type": "stun",
+                "status_duration": 2,
+                "status_value": 1.0
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_to_attacker_on_receive_attack",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 0.25,
+              "params": {
+                "status_effect_type": "stun",
+                "status_duration": 2,
+                "status_value": 1.0
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_cao_ren_ultimate",
+      "name": "英勇冲锋",
+      "skill_type": "必杀",
+      "target_type": "全体",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 0.8,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.2,
+        "4": 1.2
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 0.2,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "row_filter": "frontline",
+              "status_effect_type": "stun",
+              "status_duration": 2,
+              "status_value": 1.0
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 0.3,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "row_filter": "frontline",
+              "status_effect_type": "stun",
+              "status_duration": 2,
+              "status_value": 1.0
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 0.4,
+            "params": {
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "row_filter": "frontline",
+              "status_effect_type": "stun",
+              "status_duration": 2,
+              "status_value": 1.0
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 0.4,
+            "params": {
+              "targetSide": "enemy",
+              "target_side": "enemy",
+              "selection": "all",
+              "count": 99,
+              "row_filter": "frontline",
+              "status_effect_type": "stun",
+              "status_duration": 2,
+              "status_value": 1.0
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_tian_feng",
+    "name": "田丰",
+    "camp": "群",
+    "profession": "法术输出",
+    "role": "法师",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_2"
+    ],
+    "base_stats": {
+      "hp": 2060,
+      "attack": 192,
+      "defense": 94,
+      "speed": 108,
+      "crit_rate": 0.12,
+      "crit_damage": 0.8,
+      "armor_break": 0.08,
+      "effect_hit": 0.12,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_tian_feng_normal",
+      "name": "攻其不备",
+      "skill_type": "被动",
+      "target_type": "前排随机2名",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.8,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.2,
+        "4": 1.4
+      },
+      "effects_by_level": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [
+          {
+            "effect_type": "apply_status_on_skill_targets",
+            "value": 1.0,
+            "duration": 2,
+            "chance": 1.0,
+            "params": {
+              "status_effect_type": "skill_damage_bonus",
+              "status_duration": 2,
+              "status_value": -0.2
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_tian_feng_passive_1",
+        "name": "勇猛善战",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "crit_rate_bonus",
+              "value": 0.1,
+              "duration": -1
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": -1,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "highest_attack",
+                "count": 1,
+                "exclude_actor": true,
+                "status_effect_type": "crit_rate_bonus",
+                "status_duration": -1,
+                "status_value": 0.1
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "crit_rate_bonus",
+              "value": 0.15,
+              "duration": -1
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": -1,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "highest_attack",
+                "count": 1,
+                "exclude_actor": true,
+                "status_effect_type": "crit_rate_bonus",
+                "status_duration": -1,
+                "status_value": 0.15
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "crit_rate_bonus",
+              "value": 0.2,
+              "duration": -1
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": -1,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "highest_attack",
+                "count": 1,
+                "exclude_actor": true,
+                "status_effect_type": "crit_rate_bonus",
+                "status_duration": -1,
+                "status_value": 0.2
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "crit_rate_bonus",
+              "value": 0.2,
+              "duration": -1
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": -1,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "highest_attack",
+                "count": 1,
+                "exclude_actor": true,
+                "status_effect_type": "crit_rate_bonus",
+                "status_duration": -1,
+                "status_value": 0.2
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_tian_feng_passive_2",
+        "name": "鼓舞士气",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "params": {
+          "requires_last_skill_type": "普攻"
+        },
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "row_filter": "backline",
+                "status_effect_type": "attack_bonus",
+                "status_duration": 2,
+                "status_value": 0.2
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "row_filter": "backline",
+                "status_effect_type": "attack_bonus",
+                "status_duration": 2,
+                "status_value": 0.25
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "row_filter": "backline",
+                "status_effect_type": "attack_bonus",
+                "status_duration": 2,
+                "status_value": 0.3
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "row_filter": "backline",
+                "status_effect_type": "attack_bonus",
+                "status_duration": 2,
+                "status_value": 0.4
+              }
+            },
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "row_filter": "backline",
+                "status_effect_type": "skill_damage_bonus",
+                "status_duration": 2,
+                "status_value": 0.2
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_tian_feng_ultimate",
+      "name": "天降之火",
+      "skill_type": "必杀",
+      "target_type": "随机4人",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 2.0,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "1": 2.0,
+        "2": 2.5,
+        "3": 3.0,
+        "4": 3.0
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_cai_wenji",
+    "name": "蔡文姬",
+    "camp": "群",
+    "profession": "治疗",
+    "role": "辅助",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_1",
+      "passive_2"
+    ],
+    "base_stats": {
+      "hp": 2440,
+      "attack": 166,
+      "defense": 108,
+      "speed": 106,
+      "crit_rate": 0.08,
+      "crit_damage": 0.68,
+      "armor_break": 0.04,
+      "effect_hit": 0.08,
+      "effect_resist": 0.16
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_cai_wenji_normal",
+      "name": "天籁之音",
+      "skill_type": "被动",
+      "target_type": "前排随机1名",
+      "target_side": "ally",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 0.0,
+      "energy_cost": 0,
+      "level": 1,
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "heal_on_receive_attack",
+            "value": 0.05,
+            "duration": 2,
+            "params": {
+              "heal_scale": "source_max_hp",
+              "action_name": "天籁之音"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "heal_on_receive_attack",
+            "value": 0.08,
+            "duration": 2,
+            "params": {
+              "heal_scale": "source_max_hp",
+              "action_name": "天籁之音"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "heal_on_receive_attack",
+            "value": 0.08,
+            "duration": 2,
+            "params": {
+              "heal_scale": "source_max_hp",
+              "action_name": "天籁之音"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "heal_on_receive_attack",
+            "value": 0.08,
+            "duration": 2,
+            "params": {
+              "heal_scale": "source_max_hp",
+              "action_name": "天籁之音"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_cai_wenji_passive_1",
+        "name": "天籁祝福",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "required_skill_id": "skill_cai_wenji_normal",
+                "status_effect_type": "defense_bonus",
+                "status_duration": 2,
+                "status_value": 0.1
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "required_skill_id": "skill_cai_wenji_normal",
+                "status_effect_type": "defense_bonus",
+                "status_duration": 2,
+                "status_value": 0.15
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "required_skill_id": "skill_cai_wenji_normal",
+                "status_effect_type": "defense_bonus",
+                "status_duration": 2,
+                "status_value": 0.2
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "required_skill_id": "skill_cai_wenji_normal",
+                "status_effect_type": "defense_bonus",
+                "status_duration": 2,
+                "status_value": 0.25
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_cai_wenji_passive_2",
+        "name": "守护之音",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "params": {
+          "requires_last_skill_type": "必杀"
+        },
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "heal_over_time",
+                "status_duration": 3,
+                "status_value": 0.04,
+                "status_params": {
+                  "heal_scale": "source_max_hp",
+                  "action_name": "守护之音"
+                }
+              }
+            },
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.1,
+              "duration": 3
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "heal_over_time",
+                "status_duration": 3,
+                "status_value": 0.05,
+                "status_params": {
+                  "heal_scale": "source_max_hp",
+                  "action_name": "守护之音"
+                }
+              }
+            },
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.1,
+              "duration": 3
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "heal_over_time",
+                "status_duration": 3,
+                "status_value": 0.06,
+                "status_params": {
+                  "heal_scale": "source_max_hp",
+                  "action_name": "守护之音"
+                }
+              }
+            },
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.15,
+              "duration": 3
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_to_side",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "targetSide": "ally",
+                "target_side": "ally",
+                "selection": "all",
+                "count": 99,
+                "status_effect_type": "heal_over_time",
+                "status_duration": 3,
+                "status_value": 0.08,
+                "status_params": {
+                  "heal_scale": "source_max_hp",
+                  "action_name": "守护之音"
+                }
+              }
+            },
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.2,
+              "duration": 3
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_cai_wenji_ultimate",
+      "name": "治愈之音",
+      "skill_type": "必杀",
+      "target_type": "全体",
+      "target_side": "ally",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 0.0,
+      "energy_cost": 100,
+      "level": 1,
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "heal_side",
+            "value": 0.25,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "scale": "caster_max_hp",
+              "action_name": "治愈之音"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "heal_side",
+            "value": 0.3,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "scale": "caster_max_hp",
+              "action_name": "治愈之音"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "heal_side",
+            "value": 0.35,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "scale": "caster_max_hp",
+              "action_name": "治愈之音"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "heal_side",
+            "value": 0.35,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "scale": "caster_max_hp",
+              "action_name": "治愈之音"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_wei_yan",
+    "name": "魏延",
+    "camp": "蜀",
+    "profession": "物理输出",
+    "role": "先锋",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_3",
+      "passive_2"
+    ],
+    "base_stats": {
+      "hp": 2460,
+      "attack": 186,
+      "defense": 118,
+      "speed": 101,
+      "crit_rate": 0.11,
+      "crit_damage": 0.76,
+      "armor_break": 0.1,
+      "effect_hit": 0.08,
+      "effect_resist": 0.1
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_wei_yan_normal",
+      "name": "旋风重斩",
+      "skill_type": "被动",
+      "target_type": "单体",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 2.5,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "1": 2.5,
+        "2": 3.0,
+        "3": 3.5,
+        "4": 4.0
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "grant_stack",
+            "value": 1.0,
+            "duration": -1,
+            "params": {
+              "stack_name": "weiyan_battle_soul",
+              "target": "self",
+              "max_stacks": 4,
+              "action_name": "战魂叠加",
+              "attack_bonus_per_stack": 0.15
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "grant_stack",
+            "value": 1.0,
+            "duration": -1,
+            "params": {
+              "stack_name": "weiyan_battle_soul",
+              "target": "self",
+              "max_stacks": 4,
+              "action_name": "战魂叠加",
+              "attack_bonus_per_stack": 0.25
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "grant_stack",
+            "value": 1.0,
+            "duration": -1,
+            "params": {
+              "stack_name": "weiyan_battle_soul",
+              "target": "self",
+              "max_stacks": 4,
+              "action_name": "战魂叠加",
+              "attack_bonus_per_stack": 0.25
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "grant_stack",
+            "value": 1.0,
+            "duration": -1,
+            "params": {
+              "stack_name": "weiyan_battle_soul",
+              "target": "self",
+              "max_stacks": 4,
+              "action_name": "战魂叠加",
+              "attack_bonus_per_stack": 0.25
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_wei_yan_passive_1",
+        "name": "旋风护体",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "params": {
+          "requires_last_skill_type": "必杀"
+        },
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.2,
+              "duration": 3
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.25,
+              "duration": 3
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.3,
+              "duration": 3
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "damage_reduction",
+              "value": 0.3,
+              "duration": 3
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_wei_yan_passive_2",
+        "name": "热血战魂",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "受击后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "stack_name": "weiyan_battle_soul",
+                "stack_duration": -1,
+                "max_stacks": 4,
+                "action_name": "战魂叠加",
+                "attack_bonus_per_stack": 0.15
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "stack_name": "weiyan_battle_soul",
+                "stack_duration": -1,
+                "max_stacks": 4,
+                "action_name": "战魂叠加",
+                "attack_bonus_per_stack": 0.25
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "stack_name": "weiyan_battle_soul",
+                "stack_duration": -1,
+                "max_stacks": 4,
+                "action_name": "战魂叠加",
+                "attack_bonus_per_stack": 0.25
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "gain_stack_on_receive_attack",
+              "value": 1.0,
+              "duration": -1,
+              "params": {
+                "stack_name": "weiyan_battle_soul",
+                "stack_duration": -1,
+                "max_stacks": 4,
+                "action_name": "战魂叠加",
+                "attack_bonus_per_stack": 0.25
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_wei_yan_ultimate",
+      "name": "旋风突击",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 2.6,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "1": 2.6,
+        "2": 3.0,
+        "3": 3.4,
+        "4": 3.4
+      },
+      "params": {
+        "bonus_armor_break_from_status": "weiyan_battle_soul",
+        "armor_break_per_stack": 0.15,
+        "consume_status_on_cast": "weiyan_battle_soul"
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "heal_side",
+            "value": 1.5,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "lowest_hp",
+              "count": 1,
+              "scale": "attack",
+              "action_name": "旋风回生"
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "heal_side",
+            "value": 2.0,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "lowest_hp",
+              "count": 1,
+              "scale": "attack",
+              "action_name": "旋风回生"
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "heal_side",
+            "value": 2.5,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "lowest_hp",
+              "count": 1,
+              "scale": "attack",
+              "action_name": "旋风回生"
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "heal_side",
+            "value": 2.5,
+            "duration": 0,
+            "params": {
+              "target_side": "ally",
+              "selection": "lowest_hp",
+              "count": 1,
+              "scale": "attack",
+              "action_name": "旋风回生"
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "bonds": []
+  },
+  {
+    "id": "hero_huang_zhong",
+    "name": "黄忠",
+    "camp": "蜀",
+    "profession": "物理输出",
+    "role": "奇袭",
+    "hero_quality": "S",
+    "awakening_level": "史诗",
+    "level": 1,
+    "rare_treasure_locked_skill_slots": [
+      "passive_1",
+      "passive_2"
+    ],
+    "base_stats": {
+      "hp": 2180,
+      "attack": 194,
+      "defense": 98,
+      "speed": 114,
+      "crit_rate": 0.14,
+      "crit_damage": 0.84,
+      "armor_break": 0.1,
+      "effect_hit": 0.08,
+      "effect_resist": 0.08
+    },
+    "passive_skill_3": {
+      "skill_id": "skill_huang_zhong_normal",
+      "name": "全军突击",
+      "skill_type": "被动",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "行动时自动",
+      "damage_coefficient": 1.0,
+      "energy_cost": 0,
+      "level": 1,
+      "damage_by_level": {
+        "1": 1.0,
+        "2": 1.2,
+        "3": 1.4,
+        "4": 1.4
+      },
+      "effects_by_level": {
+        "1": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": -1,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "speed_bonus",
+              "status_duration": -1,
+              "status_value": 0.02
+            }
+          },
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": -1,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "attack_bonus",
+              "status_duration": -1,
+              "status_value": 0.02
+            }
+          }
+        ],
+        "2": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": -1,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "speed_bonus",
+              "status_duration": -1,
+              "status_value": 0.03
+            }
+          },
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": -1,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "attack_bonus",
+              "status_duration": -1,
+              "status_value": 0.03
+            }
+          }
+        ],
+        "3": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": -1,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "speed_bonus",
+              "status_duration": -1,
+              "status_value": 0.04
+            }
+          },
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": -1,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "attack_bonus",
+              "status_duration": -1,
+              "status_value": 0.04
+            }
+          }
+        ],
+        "4": [
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": -1,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "speed_bonus",
+              "status_duration": -1,
+              "status_value": 0.04
+            }
+          },
+          {
+            "effect_type": "apply_status_to_side",
+            "value": 1.0,
+            "duration": -1,
+            "chance": 1.0,
+            "params": {
+              "target_side": "ally",
+              "selection": "all",
+              "count": 99,
+              "status_effect_type": "attack_bonus",
+              "status_duration": -1,
+              "status_value": 0.04
+            }
+          }
+        ]
+      },
+      "effects": []
+    },
+    "passive_skills": [
+      {
+        "skill_id": "skill_huang_zhong_passive_1",
+        "name": "强弓破甲",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "战斗开始",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "status_effect_type": "defense_bonus",
+                "status_duration": 2,
+                "status_value": -0.08
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "status_effect_type": "defense_bonus",
+                "status_duration": 2,
+                "status_value": -0.1
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 2,
+              "chance": 1.0,
+              "params": {
+                "status_effect_type": "defense_bonus",
+                "status_duration": 2,
+                "status_value": -0.12
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "apply_status_on_skill_targets",
+              "value": 1.0,
+              "duration": 3,
+              "chance": 1.0,
+              "params": {
+                "status_effect_type": "defense_bonus",
+                "status_duration": 3,
+                "status_value": -0.14
+              }
+            }
+          ]
+        },
+        "effects": []
+      },
+      {
+        "skill_id": "skill_huang_zhong_passive_2",
+        "name": "援护攻击",
+        "skill_type": "被动",
+        "target_type": "自身",
+        "target_side": "self",
+        "trigger_timing": "友军行动后",
+        "damage_coefficient": 0.0,
+        "energy_cost": 0,
+        "level": 1,
+        "effects_by_level": {
+          "1": [
+            {
+              "effect_type": "chance_follow_up_on_ally_action",
+              "value": 1.0,
+              "duration": 0,
+              "chance": 0.25,
+              "params": {
+                "per_round_limit": 99,
+                "action_name": "援护攻击"
+              }
+            }
+          ],
+          "2": [
+            {
+              "effect_type": "chance_follow_up_on_ally_action",
+              "value": 1.0,
+              "duration": 0,
+              "chance": 0.3,
+              "params": {
+                "per_round_limit": 99,
+                "action_name": "援护攻击"
+              }
+            }
+          ],
+          "3": [
+            {
+              "effect_type": "chance_follow_up_on_ally_action",
+              "value": 1.0,
+              "duration": 0,
+              "chance": 0.35,
+              "params": {
+                "per_round_limit": 99,
+                "action_name": "援护攻击"
+              }
+            }
+          ],
+          "4": [
+            {
+              "effect_type": "chance_follow_up_on_ally_action",
+              "value": 1.0,
+              "duration": 0,
+              "chance": 0.4,
+              "params": {
+                "per_round_limit": 99,
+                "action_name": "援护攻击"
+              }
+            }
+          ]
+        },
+        "effects": []
+      }
+    ],
+    "ultimate_skill": {
+      "skill_id": "skill_huang_zhong_ultimate",
+      "name": "百步穿杨",
+      "skill_type": "必杀",
+      "target_type": "前排",
+      "target_side": "enemy",
+      "trigger_timing": "怒气满自动",
+      "damage_coefficient": 1.8,
+      "energy_cost": 100,
+      "level": 1,
+      "damage_by_level": {
+        "1": 1.8,
+        "2": 2.3,
+        "3": 2.8,
+        "4": 2.8
+      },
+      "effects": []
+    },
+    "bonds": []
+  }
+]

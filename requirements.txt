@@ -1,0 +1,10 @@
+# Runtime dependencies
+openpyxl>=3.1
+pycryptodome>=3.20
+
+# Dev and test dependencies
+pytest>=8.0
+
+# Notes:
+# - tkinter/ttk are part of the Python standard library.
+# - pycryptodome provides the `Crypto.*` namespace used by save encryption.
